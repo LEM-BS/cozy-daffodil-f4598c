@@ -1,0 +1,291 @@
+/* =========================
+   RESET / BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* =========================
+   HEADER & NAV
+========================= */
+header {
+  background: #004466; /* Main header/nav color */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+nav ul li a:hover {
+  background: #005f87;
+}
+.active {
+  background: #003244; /* highlight for active page link */
+}
+.cta {
+  background: #e77b23;
+  color: #fff;
+}
+.cta:hover {
+  background: #cf681e;
+}
+
+/* =========================
+   HERO SECTION (Home Page)
+========================= */
+.hero {
+  background: #0077b6;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  margin-bottom: 1rem;
+}
+.cta-button {
+  display: inline-block;
+  background: #004466;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.cta-button:hover {
+  background: #005f87;
+}
+
+/* =========================
+   HOME SERVICES & WHY CHOOSE
+========================= */
+.home-services, .why-choose-us {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+.box-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.box-container h3 {
+  color: #004466;
+  margin-bottom: 1rem;
+}
+.home-services-list, .why-choose-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.home-services-list li, .why-choose-list li {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.home-services-list li::before, .why-choose-list li::before {
+  content: "◆";
+  color: #0077b6;
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  font-size: 1rem;
+}
+
+/* =========================
+   BOXED SECTIONS (About/Services)
+========================= */
+.about-box, .services-box {
+  background: #fff;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.about-box .container, .services-box .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-box h2, .services-box h2 {
+  color: #004466;
+  margin-bottom: 1rem;
+}
+
+/* 
+   If you're referencing multiple 
+   subheadings (h3) within services, 
+   you can style them here:
+*/
+.services-box h3 {
+  color: #004466;
+  margin-top: 2rem; 
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+/* Subheading paragraphs, etc. */
+.services-box p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.services-box p strong {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Services list and diamond bullets */
+.services-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+.services-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.services-list li::before {
+  content: "◆";
+  color: #0077b6;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+}
+
+/* =========================
+   COMPARISON PAGE
+========================= */
+.comparison-section {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  text-align: center;
+}
+.comparison-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.comparison-section h2 {
+  color: #004466;
+  margin-bottom: 1rem;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.comparison-table th, .comparison-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+.comparison-table thead {
+  background: #0077b6;
+  color: #fff;
+}
+.comparison-table tbody tr:nth-child(even) {
+  background: #f0f0f0;
+}
+.comparison-note {
+  margin-top: 1rem;
+}
+
+/* =========================
+   CONTACT / ENQUIRY PAGES
+========================= */
+.contact-page, .enquiry-page {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  text-align: center;
+}
+.contact-form, .enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact-form h2, .enquiry-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #004466;
+}
+.contact-form p, .enquiry-form p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.contact-form label, .enquiry-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.contact-form input, .contact-form textarea,
+.enquiry-form input, .enquiry-form textarea,
+.enquiry-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form button, .enquiry-form button {
+  background: #004466;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.contact-form button:hover, .enquiry-form button:hover {
+  background: #005f87;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  background: #004466;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - LEM Building Surveying Ltd</title>
+  <meta name="description" content="Learn more about LEM Building Surveying Ltd, our expertise, and commitment to professional property surveys.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- BOXED ABOUT SECTION -->
+  <section class="about-box">
+    <div class="container">
+      <h2>About LEM Building Surveying Ltd</h2>
+      <p>
+        We are an independent firm of professional building surveyors, dedicated to providing expert property assessments 
+        and reports for home buyers, property investors, landlords, and commercial clients.
+      </p>
+      <p>
+        With extensive experience in the industry, we specialise in residential property inspections, ensuring 
+        our clients have the accurate information needed to make informed property decisions. 
+        Our commitment to accuracy, integrity, and professionalism underpins every survey we conduct.
+      </p>
+      <a href="enquiry.html" class="cta-button">Request a Survey</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-include').innerHTML = data;
+        })
+        .catch(err => console.error('Header include failed:', err));
+    });
+  </script>
+</body>
+</html>

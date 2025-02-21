@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Survey - LEM Building Surveying Ltd</title>
+  <meta name="description" content="Request a property survey from LEM Building Surveying Ltd. Fill out the form to get started.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <section class="enquiry-page">
+    <div class="enquiry-form">
+      <h2>Request a Survey</h2>
+      <p>Please fill out the form below to request a property survey. We'll get back to you as soon as possible.</p>
+
+      <form name="enquiry-form" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="enquiry-form">
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="address">Your Address:</label>
+        <input type="text" id="address" name="address">
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <label for="survey-type">Select Survey Type:</label>
+        <select id="survey-type" name="survey-type" required>
+          <option value="">-- Please Choose --</option>
+          <option value="level-1">RICS Level 1 Home Survey</option>
+          <option value="level-2">RICS Level 2 Home Survey</option>
+          <option value="level-3">RICS Level 3 Home Survey</option>
+          <option value="damp">Damp &amp; Timber Report</option>
+          <option value="fire-safety">Fire Safety Assessment</option>
+          <option value="measured">Measured Building Survey</option>
+          <option value="epc">Energy Performance Certificate (EPC)</option>
+          <option value="ventilation">Ventilation Assessment</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <label for="details">Additional Details:</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+        
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-include').innerHTML = data;
+        })
+        .catch(err => console.error('Header include failed:', err));
+    });
+  </script>
+</body>
+</html>

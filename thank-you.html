@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - LEM Building Surveying Ltd</title>
+  <meta name="description" content="Thank you for contacting LEM Building Surveying Ltd. We will get back to you soon.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <section class="thank-you">
+    <h2>Thank You!</h2>
+    <p>Your enquiry has been successfully submitted. We will get back to you shortly.</p>
+    <a href="index.html" class="cta-button">Return to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-include').innerHTML = data;
+        })
+        .catch(err => console.error('Header include failed:', err));
+    });
+  </script>
+</body>
+</html>
