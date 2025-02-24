@@ -16,9 +16,10 @@
       <h2>Contact Us</h2>
       <p>Have questions about our services or want more details? Send us a message below.</p>
 
-      <form name="contact-form" method="POST" data-netlify="true" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="contact-form">
-        
+      <form action="https://formspree.io/f/xyzkaaay" method="POST">
+        <!-- Redirect to a thank-you page after submission -->
+        <input type="hidden" name="_redirect" value="https://www.lembuildingsurveying.co.uk/thank-you.html">
+
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
         

@@ -4,43 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - LEM Building Surveying Ltd</title>
-  <meta name="description" content="Learn more about LEM Building Surveying Ltd, our expertise, and commitment to professional property surveys.">
+  <meta name="description" content="Learn more about LEM Building Surveying Ltd, our expertise, mission, and commitment to professional property surveys.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Shared Header -->
   <div id="header-include"></div>
-
-  <!-- BOXED ABOUT SECTION -->
-  <section class="about-box">
-    <div class="container">
-      <h2>About LEM Building Surveying Ltd</h2>
+  
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>About LEM Building Surveying Ltd</h1>
       <p>
-        We are an independent firm of professional building surveyors, dedicated to providing expert property assessments 
-        and reports for home buyers, property investors, landlords, and commercial clients.
+        We are an independent firm of professional building surveyors, dedicated to providing expert property assessments and reports for homeowners, investors, landlords, and commercial clients.
       </p>
-      <p>
-        With extensive experience in the industry, we specialise in residential property inspections, ensuring 
-        our clients have the accurate information needed to make informed property decisions. 
-        Our commitment to accuracy, integrity, and professionalism underpins every survey we conduct.
-      </p>
-      <a href="enquiry.html" class="cta-button">Request a Survey</a>
+      <a href="../contact.html" class="cta-button">Get in Touch</a></div>
     </div>
   </section>
-
+  
+  <!-- MAIN CONTENT SECTION -->
+  <section class="rics-surveys">
+    <div class="box-container">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to deliver clear, accurate, and actionable insights to every client. We believe that by offering thorough investigations and jargon-free reports, we empower you to understand your property’s condition and plan confidently for the future.
+      </p>
+      <h2>Our Approach</h2>
+      <h3>Attention to Detail</h3>
+      <p>
+        Each inspection is carried out with meticulous care, ensuring no issue goes unnoticed.
+      </p>
+      <h3>Client-Centric Service</h3>
+      <p>
+        We tailor our reports and advice to your unique needs—whether you’re a first-time buyer or a seasoned property professional.
+      </p>
+      <h3>Industry Standards</h3>
+      <p>
+        Although we are not regulated by RICS, we follow the RICS Home Survey Standards to ensure consistency and reliability.
+      </p>
+      <h3>Local Expertise</h3>
+      <p>
+        Our deep knowledge of the local property market helps us quickly identify common issues and provide practical recommendations.
+      </p>
+      <h3>Integrity and Professionalism</h3>
+      <p>
+        We uphold transparency and ethical conduct in all our interactions, ensuring you can trust our advice.
+      </p>
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Comprehensive Services:</strong> From RICS Home Surveys to Damp Surveys, Measured Surveys, and EPCs with Floorplans.</li>
+        <li><strong>Personalized Guidance:</strong> We tailor our services to your specific property needs.</li>
+        <li><strong>Clear Reporting:</strong> Our reports break down complex issues into straightforward, actionable advice.</li>
+        <li><strong>Proactive Advice:</strong> We offer guidance on maintenance and repairs to help preserve your property’s value.</li>
+      </ul>
+      
+      <!-- Centralized CTA Section -->
+      <div class="cta-section">
+        <h2>Get in Touch</h2>
+        <p>Ready to learn more about our services or schedule a survey?</p>
+        <a href="contact.html" class="cta-button">Contact us today!</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
   </footer>
-
-  <!-- JavaScript to inject header.html -->
+  
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('header.html')
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("../header.html")
         .then(response => response.text())
         .then(data => {
-          document.getElementById('header-include').innerHTML = data;
+          document.getElementById("header-include").innerHTML = data;
         })
-        .catch(err => console.error('Header include failed:', err));
+        .catch(err => console.error("Header include failed:", err));
     });
   </script>
 </body>

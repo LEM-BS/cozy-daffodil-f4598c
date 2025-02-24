@@ -55,7 +55,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   HERO SECTION (Home Page)
+   HERO SECTION (Home Page & Others)
 ========================= */
 .hero {
   background: #0077b6;
@@ -67,7 +67,8 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 0 auto;
 }
-.hero h2 {
+.hero h2, 
+.hero h1 {  /* Allow hero to use h1 if needed */
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -83,7 +84,7 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 .cta-button:hover {
-  background: #005f87;
+  background: #005bb5;
 }
 
 /* =========================
@@ -116,7 +117,7 @@ nav ul li a:hover {
   padding-left: 1.5rem;
 }
 .home-services-list li::before, .why-choose-list li::before {
-  content: "◆";
+  content: "◆";  /* Ensure correct encoding; adjust if needed */
   color: #0077b6;
   position: absolute;
   left: 0;
@@ -143,20 +144,13 @@ nav ul li a:hover {
   color: #004466;
   margin-bottom: 1rem;
 }
-
-/* 
-   If you're referencing multiple 
-   subheadings (h3) within services, 
-   you can style them here:
-*/
+/* Optional subheading styles for services-box */
 .services-box h3 {
   color: #004466;
   margin-top: 2rem; 
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
 }
-
-/* Subheading paragraphs, etc. */
 .services-box p {
   margin-bottom: 1rem;
   line-height: 1.4;
@@ -167,7 +161,9 @@ nav ul li a:hover {
   margin-bottom: 0.25rem;
 }
 
-/* Services list and diamond bullets */
+/* =========================
+   SERVICES LIST (Diamond Bullets)
+========================= */
 .services-list {
   list-style: none;
   margin: 1rem 0;
@@ -280,6 +276,64 @@ nav ul li a:hover {
 }
 
 /* =========================
+   RICS HOME SURVEYS PAGE (Custom Section)
+========================= */
+.rics-surveys {
+  background: #fff;
+  padding: 40px 20px;
+}
+.rics-surveys .box-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* left-aligned for longer text */
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+.rics-surveys h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #004466;
+}
+.rics-surveys h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #004466;
+}
+.rics-surveys p,
+.rics-surveys ul {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+.rics-surveys ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+/* =========================
+   ADDITIONAL CTA STYLES
+========================= */
+/* Global CTA Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 10px 20px;
+  background: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.cta-button:hover {
+  background: #005bb5;
+}
+/* Centering container for CTA if needed */
+.centered-cta {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -288,4 +342,20 @@ footer {
   color: #fff;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.cta-section {
+    text-align: center;
+}
+.cta, .cta-button {
+    background-color: #e77b23; /* Orange */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }

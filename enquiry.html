@@ -16,8 +16,9 @@
       <h2>Request a Survey</h2>
       <p>Please fill out the form below to request a property survey. We'll get back to you as soon as possible.</p>
 
-      <form name="enquiry-form" method="POST" data-netlify="true" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="enquiry-form">
+      <form action="https://formspree.io/f/xzzdqqqz" method="POST">
+        <!-- Optional: Redirect to a thank-you page after submission -->
+        <input type="hidden" name="_redirect" value="https://www.lembuildingsurveying.co.uk/thank-you.html">
         
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>

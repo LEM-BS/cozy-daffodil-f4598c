@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RICS Home Surveys | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Explore our RICS Home Surveys – from Condition Reports to comprehensive Building Surveys – all carried out to the RICS Home Survey Standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+  
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>RICS Home Surveys</h1>
+      <p>
+        Buying a home is a major investment. Our surveys help you identify potential issues and make informed decisions.
+      </p>
+      <a href="../enquiry.html" class="cta-button">Request a Survey</a></div>
+    </div>
+  </section>
+  
+  <!-- MAIN CONTENT SECTION -->
+  <section class="rics-surveys">
+    <div class="box-container">
+      <h1>What Are RICS Home Surveys?</h1>
+      <p>RICS Home Surveys are professional inspections designed to assess the condition of a property before purchase. Whether you’re a first-time buyer or an experienced investor, these surveys help you understand potential issues and make informed decisions.</p>
+      
+      <h2>RICS Survey Levels</h2>
+      <p>We provide three levels of surveys based on RICS Home Survey Standards:</p>
+
+      <h3>Level 1 – RICS Condition Report</h3>
+      <p>A basic overview that identifies urgent or significant defects. Ideal for modern properties in generally good condition.</p>
+
+      <h3>Level 2 – RICS HomeBuyer Report</h3>
+      <p>A mid-level inspection that offers a detailed analysis, including an assessment of structural elements and practical maintenance advice.</p>
+
+      <h3>Level 3 – RICS Building Survey</h3>
+      <p>A comprehensive survey for older, larger, or more complex properties. This in-depth report details structural integrity and repair requirements.</p>
+
+      <h2>How to Choose the Right Survey</h2>
+      <h3>Property Age & Condition:</h3>
+      <p>For newer homes, a Level 1 may suffice. Older or mixed-age properties often need a more detailed report.</p>
+
+      <h3>Extent of Work Needed:</h3>
+      <p>If you suspect hidden issues or visible defects, a Level 3 survey can uncover crucial details.</p>
+
+      <h3>Your Investment Strategy:</h3>
+      <p>A thorough survey can save time and money if you plan renovations or require maintenance insights.</p>
+
+      <h2>Why Choose LEM Building Surveying?</h2>
+      <ul>
+        <li><strong>Qualified Expertise:</strong> We adhere to RICS Home Survey Standards for reliable, clear reports.</li>
+        <li><strong>Tailored Service:</strong> Our surveys are customized to your property’s unique needs.</li>
+        <li><strong>Clear Reporting:</strong> We break down complex technical details into actionable advice.</li>
+      </ul>
+      
+      <!-- Centralized CTA Section -->
+      <div class="cta-section">
+        <h2>Request a Survey</h2>
+        <p>Buying a home is a major investment. Schedule your RICS Home Survey today.</p>
+        <a href="contact.html" class="cta-button">Book a Survey</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-include").innerHTML = data;
+        })
+        .catch(err => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>
