@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Building Surveys in Chester | LEM Building Surveying Ltd</title>
+  <meta name="description" content="RICS Home Surveys and Damp Reports in Chester. Local surveyor offering Level 2, Level 3 and timber assessments for buyers, landlords and homeowners." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Home & Building Surveys in Chester</h1>
+      <p>Independent, RICS-aligned surveys for buyers, landlords, and homeowners in Chester and nearby areas.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Property Surveys Across Chester</h2>
+      <p>
+        LEM Building Surveying Ltd is based nearby in Deeside and regularly carries out surveys in and around Chester. Whether you're purchasing a Victorian terrace, a new-build flat, or managing an older property, we provide honest, expert insight.
+      </p>
+
+      <h2>Our Chester Surveying Services</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> Ideal for conventional homes—includes details on defects, risks, and maintenance advice.</li>
+        <li><strong>RICS Level 3 Home Survey:</strong> Our most detailed survey, recommended for older, altered, or larger homes.</li>
+        <li><strong>Damp & Timber Reports:</strong> Inspections for damp, condensation, timber decay and woodworm—great for landlords and buyers alike.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Scaled plans to support extensions, planning applications or renovations.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Identify internal air quality issues and causes of condensation with clear recommendations.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose Us for Chester Property Surveys?</h2>
+      <ul>
+        <li><strong>Local & Independent:</strong> Based close to Chester with practical experience across the city and surrounding villages.</li>
+        <li><strong>Clarity & Reliability:</strong> Clear reports with fast turnaround—no upselling or biased advice.</li>
+        <li><strong>Tailored Advice:</strong> Direct communication with Liam, your surveyor, from start to finish.</li>
+      </ul>
+
+      <h2>Chester Coverage</h2>
+      <p>We cover the city centre, Hoole, Handbridge, Boughton, Newton, Upton, and surrounding areas.</p>
+
+      <!-- CTA SECTION -->
+      <div class="cta-section">
+        <h2>Arrange a Survey in Chester</h2>
+        <p>Call <a href="tel:07378732037">07378 732037</a> or <a href="/enquiry.html">submit your details online</a> to get started.</p>
+        <a href="/services.html" class="cta-button">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-include").innerHTML = html;
+        })
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>

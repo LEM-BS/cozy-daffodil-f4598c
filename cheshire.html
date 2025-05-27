@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Building Surveys in Cheshire | LEM Building Surveying Ltd</title>
+  <meta name="description" content="RICS Home Surveys and Damp Reports in Cheshire. Level 2 and Level 3 surveys, timber reports, and floorplans for buyers, landlords, and homeowners." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Home & Building Surveys in Cheshire</h1>
+      <p>Independent RICS-aligned surveys across Cheshire—helping you move forward with confidence.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Expert Surveying Across Cheshire</h2>
+      <p>
+        Based in Deeside and covering Cheshire’s diverse property stock, we help homebuyers, investors, and landlords with clear and independent advice. Whether you're purchasing in a market town, a rural village, or central Chester, we tailor every survey to your needs.
+      </p>
+
+      <h2>Popular Survey Services in Cheshire</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> For standard properties—includes details on condition, defects and essential advice.</li>
+        <li><strong>RICS Level 3 Home Survey:</strong> Ideal for older, larger, or heavily altered buildings—provides in-depth structural insight.</li>
+        <li><strong>Damp & Timber Reports:</strong> Targeted inspections identifying causes of damp, mould, rot or infestation—ideal for compliance or peace of mind.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Precision plans for home extensions, redesigns or planning applications.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Evaluate internal air quality, airflow and causes of condensation issues.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose Us in Cheshire?</h2>
+      <ul>
+        <li><strong>Experienced & Local:</strong> We regularly survey properties across Cheshire—from Chester to Tarporley, Winsford, Northwich and beyond.</li>
+        <li><strong>Independent:</strong> No sales commissions, no upselling—just honest reports based on property condition.</li>
+        <li><strong>RICS Standards:</strong> All our work is carried out in accordance with the latest RICS Home Survey Standards.</li>
+      </ul>
+
+      <h2>Areas Covered in Cheshire</h2>
+      <p>Including Chester, Northwich, Winsford, Ellesmere Port, Tarporley, Helsby, Frodsham, and nearby areas.</p>
+
+      <!-- CTA SECTION -->
+      <div class="cta-section">
+        <h2>Arrange a Survey in Cheshire</h2>
+        <p>Call <a href="tel:07378732037">07378 732037</a> or use our online form to get started today.</p>
+        <a href="/services.html" class="cta-button">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header via JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header-include').innerHTML = html)
+      .catch(err => console.error('Header include failed:', err));
+
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer-include').innerHTML = html)
+      .catch(err => console.error('Footer include failed:', err));
+  });
+</script>

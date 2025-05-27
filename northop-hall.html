@@ -1,1 +1,54 @@
-<html><head><title>Northop Hall Surveys</title></head><body><h1>Northop Hall Home & Building Surveys</h1></body></html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RICS Home & Building Surveys in Northop Hall | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor for Northop Hall. RICS Home Surveys (Level 1, 2 & 3), Damp & Timber Reports, Measured Surveys & more. Based in Deeside and serving Flintshire."/>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>  <section class="hero">
+    <div class="hero-container">
+      <h1>Northop Hall Property Surveys</h1>
+      <p>Reliable, professional property surveys from an experienced local surveyor based in Deeside.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>  <section class="service-detail">
+    <div class="box-container">
+      <h2>Expert Surveys in Northop Hall</h2>
+      <p>Buying or managing property in Northop Hall? We offer impartial, detailed survey reports to support your decision-making—carried out by a fully independent building surveyor.</p><h2>Services Offered:</h2>
+  <ul>
+    <li><strong>RICS Home Surveys (Levels 1, 2 & 3):</strong> Comprehensive reports, tailored to the condition and age of your property.</li>
+    <li><strong>Damp & Timber Reports:</strong> Independent assessments of moisture, decay, woodworm, and mould risks.</li>
+    <li><strong>Measured Surveys & Floorplans:</strong> Scaled plans for extensions, legal documentation, or project planning.</li>
+    <li><strong>Residential Ventilation Assessments:</strong> Diagnose issues related to airflow, condensation, and indoor air quality.</li>
+  </ul>
+  <li><a href="/services.html">View All Services Offered</a></li>
+
+  <h2>Why LEM Building Surveying?</h2>
+  <ul>
+    <li><strong>Deeside Based:</strong> Local knowledge of properties across Northop Hall and surrounding Flintshire areas.</li>
+    <li><strong>RICS-Compliant Reports:</strong> Clear, structured and reliable findings following industry standards.</li>
+    <li><strong>No Sales Agenda:</strong> We don’t sell treatments—just honest, useful guidance you can trust.</li>
+  </ul>
+
+  <h2>Book Your Survey</h2>
+  <p><a href="/contact.html">Get in touch</a> to talk through your options or <a href="/enquiry.html">submit an enquiry form</a> for a free quote. We're here to help, with fast turnaround times and personal service.</p>
+
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="/services.html" class="cta-button">See All Services</a>
+  </p>
+</div>
+
+  </section>  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("header-include").innerHTML = html))
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script></body>
+</html>

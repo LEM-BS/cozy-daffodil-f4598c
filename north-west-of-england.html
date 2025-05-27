@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Building Surveys | North West England | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent home surveys in the North West of England by LEM Building Surveying Ltd. RICS Level 1, Level 2, Level 3 Building Surveys, Damp & Timber Reports, and more." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>RICS Home & Building Surveys in the North West</h1>
+      <p>Independent property surveys for homebuyers, sellers, landlords, and homeowners across the North West of England.</p>
+      <a href="/enquiry.html" class="cta-button">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Trusted Property Surveyor Covering the North West</h2>
+      <p>Based in Deeside and proudly serving the North West of England, LEM Building Surveying Ltd delivers clear, reliable surveys to help you make informed property decisions. Whether you’re purchasing, renovating, or resolving concerns, we offer independent, expert advice—always tailored to your property’s needs.</p>
+
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>RICS Level 1 Home Survey:</strong> A basic report highlighting key visible issues. Ideal for new-build or conventionally built homes in good condition.</li>
+        <li><strong>RICS Level 2 Home Survey (Homebuyer Report):</strong> A detailed visual inspection of all major elements, covering significant defects, maintenance guidance, and repair advice.</li>
+        <li><strong>RICS Level 3 Home Survey (Building Survey):</strong> The most comprehensive option, perfect for older, extended, or non-standard properties. Includes structural concerns and tailored recommendations.</li>
+        <li><strong>Damp & Mould Surveys:</strong> Identify causes of dampness, mould, condensation, and moisture—backed by impartial advice and digital readings.</li>
+        <li><strong>Damp & Timber Reports:</strong> Inspection and reporting on woodworm, rot, and associated damp issues, ensuring structural safety.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Ensuring healthy air quality and identifying poor ventilation in homes.</li>
+        <li><a href="/services.html">View All Services Offered</a></li>
+      </ul>
+
+      <h2>Why Choose LEM?</h2>
+      <ul>
+        <li><strong>Independent & Unbiased:</strong> We offer honest assessments without selling treatments or repairs.</li>
+        <li><strong>Local Knowledge:</strong> Experienced with property types across the North West—from Victorian terraces to modern developments.</li>
+        <li><strong>Clear Reports:</strong> Our reports are written in plain English, with photos and priority recommendations.</li>
+        <li><strong>Personal Service:</strong> You’ll deal directly with Liam, a qualified surveyor—not a sales team.</li>
+      </ul>
+
+      <h2>Areas We Cover in the North West</h2>
+      <p>We serve across the North West of England including Cheshire, Wirral, Merseyside, Manchester suburbs, and surrounding areas.</p>
+
+      <div class="cta-section">
+        <h2>Book Your Survey Today</h2>
+        <p>Need a RICS survey or damp inspection in the North West? <a href="tel:07378732037">Call Liam on 07378 732037</a> or request a quote below.</p>
+        <a href="/enquiry.html" class="cta-button">Request a Survey</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header-include").innerHTML = html;
+        })
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>

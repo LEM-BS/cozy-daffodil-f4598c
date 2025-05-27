@@ -1,1 +1,74 @@
-<html><head><title>Hawarden Surveys</title></head><body><h1>Hawarden Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Surveyor in Hawarden | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor in Hawarden. RICS Home Surveys, Damp & Timber Reports, Measured Surveys and more from LEM Building Surveying Ltd." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Building Surveyor in Hawarden</h1>
+      <p>
+        RICS Home Surveys, Damp Reports, Timber Inspections and more from your trusted local independent surveyor.
+      </p>
+      <a href="/enquiry.html" class="cta-button">Request a Survey</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Property Surveys in Hawarden</h2>
+      <p>
+        Based in Deeside, we regularly carry out property surveys in Hawarden and the surrounding area. Whether you're buying a home, investigating damp, or need professional advice before renovations, we deliver clear, detailed reports tailored to your needs.
+      </p>
+
+      <h2>Popular Survey Services</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> Ideal for most modern homes – detailed, jargon-free, and includes repair guidance.</li>
+        <li><strong>RICS Level 3 Home Survey:</strong> In-depth inspection for older or extended properties, including full structural insight.</li>
+        <li><strong>Damp & Timber Reports:</strong> Identify causes of damp, mould, or timber decay with clear, impartial recommendations.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate measurements for extensions, planning, or internal redesigns.</li>
+        <li><strong>EPCs with Floorplans:</strong> Combined Energy Performance Certificate and detailed floorplan—ideal for listings, compliance, and property marketing.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Identify poor airflow and condensation risks to maintain a healthier home.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Local & Independent:</strong> We know Hawarden’s properties and typical issues inside out.</li>
+        <li><strong>Personal Service:</strong> You’ll deal directly with Liam – no call centres or outsourcing.</li>
+        <li><strong>Clear Advice:</strong> Our reports are easy to follow, with honest, actionable recommendations.</li>
+      </ul>
+
+      <h2>Get Started</h2>
+      <p>
+        Get in touch today to arrange a survey or request a free, no-obligation quote. We’ll help you understand your property with confidence.
+      </p>
+
+      <p>
+        <a href="/services.html" class="cta-button">Explore All Services</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById("header-include").innerHTML = html;
+        })
+        .catch(err => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>

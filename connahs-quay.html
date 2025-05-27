@@ -1,1 +1,75 @@
-<html><head><title>Connah's Quay Surveys</title></head><body><h1>Connah's Quay Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Surveyor in Connah’s Quay | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor in Connah’s Quay. RICS Home Surveys, Damp & Timber Reports, Measured Surveys and more from LEM Building Surveying Ltd." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Building Surveyor in Connah’s Quay</h1>
+      <p>
+        Trusted RICS Home Surveys, Damp Inspections, Timber Reports and more for property owners in Connah’s Quay.
+      </p>
+      <a href="/enquiry.html" class="cta-button">Request a Survey</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Property Surveys in Connah’s Quay</h2>
+      <p>
+        Based nearby in Deeside, we serve clients throughout Connah’s Quay with clear, impartial survey reports for a variety of property types and situations. Whether you're buying, renting, or maintaining a property, our professional insights help you move forward with confidence.
+      </p>
+
+      <h2>Core Surveying Services</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> Perfect for conventional properties—thorough, clear, and cost-effective.</li>
+        <li><strong>RICS Level 3 Building Survey:</strong> Ideal for older or altered homes—includes structural analysis and repair advice.</li>
+        <li><strong>Damp & Timber Surveys:</strong> Diagnose damp patches, mould, or rot and receive expert, unbiased guidance.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate property layouts for renovations, planning, or documentation.</li>
+        <li><strong>EPCs with Floorplans:</strong> Combined Energy Performance Certificate and detailed floorplan—ideal for listings, compliance, and property marketing.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Check air quality and reduce condensation or mould risks.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose LEM?</h2>
+      <ul>
+        <li><strong>Local Expertise:</strong> We’re based in Deeside and know the property types common in Connah’s Quay.</li>
+        <li><strong>Personal Service:</strong> Liam carries out every survey himself—no third-party contractors.</li>
+        <li><strong>Straightforward Reporting:</strong> We keep things clear, practical, and easy to act on.</li>
+      </ul>
+
+      <h2>Book a Survey or Ask a Question</h2>
+      <p>
+        Whether you’re ready to book or just exploring your options, we’re happy to help. Reach out for a free quote or tailored advice.
+      </p>
+
+      <p>
+        <a href="/services.html" class="cta-button">Explore All Services</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header via JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header-include').innerHTML = html)
+      .catch(err => console.error('Header include failed:', err));
+
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer-include').innerHTML = html)
+      .catch(err => console.error('Footer include failed:', err));
+  });
+</script>

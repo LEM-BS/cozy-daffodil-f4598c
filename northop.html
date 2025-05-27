@@ -1,1 +1,65 @@
-<html><head><title>Northop Surveys</title></head><body><h1>Northop Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RICS Home & Building Surveys in Northop | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor for Northop. RICS Home Surveys (Level 1, 2 & 3), Damp & Timber Reports, Measured Surveys & more. Based in Deeside and serving Flintshire."/>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Northop Property Surveys</h1>
+      <p>Trusted home and building surveys from a local, independent surveyor based in Deeside.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Expert Property Surveys in Northop</h2>
+      <p>If you're buying, selling or managing a property in Northop, we offer comprehensive, independent surveys to help you make confident decisions. Based in Deeside, we know the local property landscape well and provide clear, reliable advice.</p>
+
+      <h2>Our Services Include:</h2>
+      <ul>
+        <li><strong>RICS Level 1, 2 & 3 Home Surveys:</strong> From entry-level condition reports to full structural building surveys, compliant with the latest RICS standards.</li>
+        <li><strong>Damp & Timber Reports:</strong> Identify damp, mould, timber decay, and related issues with impartial recommendations.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate plans for extensions, renovation, or planning purposes.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Evaluate airflow and identify areas where improved ventilation could benefit your home.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose LEM Building Surveying?</h2>
+      <ul>
+        <li><strong>Independent and Impartial:</strong> No sales agenda—just honest, expert advice tailored to your needs.</li>
+        <li><strong>Local Experience:</strong> We’re based in Deeside and experienced with Northop’s property types, from modern homes to older cottages.</li>
+        <li><strong>Clear Reporting:</strong> Our reports are straightforward, photographic and jargon-free—making it easy to understand what matters.</li>
+      </ul>
+
+      <h2>Get Started</h2>
+      <p>Whether you're a homeowner, buyer, or landlord, we're here to help. <a href="/contact.html">Contact us today</a> to discuss your property or <a href="/enquiry.html">request your free quote</a> online in minutes.</p>
+
+      <p style="text-align: center; margin-top: 2rem;">
+        <a href="/services.html" class="cta-button">See All Services</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("header-include").innerHTML = html))
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>

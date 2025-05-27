@@ -1,1 +1,66 @@
-<html><head><title>Mold Surveys</title></head><body><h1>Mold Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Independent RICS Home Surveys and Damp Reports in Mold. Serving property buyers and homeowners with professional advice and clear reports."/>
+  <title>Home & Building Surveys in Mold | LEM Building Surveying Ltd</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Property Surveys in Mold</h1>
+      <p>RICS Home Surveys & Damp Reports from a local, independent surveyor based in Deeside.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Survey</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Serving Mold & Surrounding Areas</h2>
+      <p>At LEM Building Surveying Ltd, we offer clear, expert surveys to support your property decisions. Whether you're buying, selling, or investigating concerns, our independent reports give you confidence and clarity.</p>
+
+      <h2>Available Surveys in Mold</h2>
+      <ul>
+        <li><strong>RICS Level 1 Survey:</strong> Entry-level survey for modern homes in good condition.</li>
+        <li><strong>RICS Level 2 Survey (Homebuyer Report):</strong> Covers defects, repairs, and maintenance for conventional properties.</li>
+        <li><strong>RICS Level 3 Survey (Building Survey):</strong> Full structural report ideal for older or extended properties.</li>
+        <li><strong>Damp & Timber Reports:</strong> Investigating issues like rising damp, penetrating damp, woodworm, and rot.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate plans for extensions, refurbishments, or records.</li>
+        <li><strong>Ventilation Assessments:</strong> Identify condensation risks and poor airflow in residential homes.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose LEM?</h2>
+      <ul>
+        <li><strong>Local Knowledge:</strong> Experienced with properties in Mold, Flintshire, and surrounding areas.</li>
+        <li><strong>Independent & Impartial:</strong> No ties to estate agents or contractors—just honest advice.</li>
+        <li><strong>RICS-Aligned Reports:</strong> Professionally structured and clearly written for peace of mind.</li>
+      </ul>
+
+      <h2>Request a Quote</h2>
+      <p>Need a property survey in Mold? <a href="tel:07378732037">Call Liam on 07378 732037</a> or use our simple form to get started.</p>
+      <a href="/enquiry.html" class="cta-button">Get a Quote</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('header-include').innerHTML = html;
+        })
+        .catch(err => console.error('Header include failed:', err));
+    });
+  </script>
+</body>
+</html>

@@ -1,86 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <title>About LEM Building Surveying Ltd | Liam Butler BSc AssocRICS MRPSA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - LEM Building Surveying Ltd</title>
-  <meta name="description" content="Learn more about LEM Building Surveying Ltd, our expertise, mission, and commitment to professional property surveys.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Meet Liam Butler BSc AssocRICS MRPSA—independent surveyor serving Deeside, Chester & beyond. Trusted advice, local knowledge, and clear reporting.">
+  <meta name="keywords" content="Liam Butler surveyor, AssocRICS, MRPSA, building surveyor Chester, independent property surveyor, home surveys Deeside">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About LEM Building Surveying Ltd">
+  <meta property="og:description" content="Independent, experienced and approachable—clear, honest advice for every home buyer.">
+  <meta property="og:url" content="https://www.lembuildingsurveying.co.uk/about">
+  <meta property="og:image" content="https://www.lembuildingsurveying.co.uk/images/liam-butler-og.jpg">
+
+  <link rel="canonical" href="https://www.lembuildingsurveying.co.uk/about">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LEM Building Surveying Ltd",
+    "url": "https://www.lembuildingsurveying.co.uk",
+    "logo": "https://www.lembuildingsurveying.co.uk/images/logo.png",
+    "areaServed": ["North Wales", "Chester", "Cheshire", "North West England"],
+    "member": {
+      "@type": "Person",
+      "name": "Liam Butler",
+      "jobTitle": "Independent Property Surveyor",
+      "hasCredential": ["BSc", "AssocRICS", "MRPSA"],
+      "telephone": "+44-7378-732037"
+    }
+  }
+  </script>
 </head>
+
 <body>
   <!-- Shared Header -->
   <div id="header-include"></div>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('header-include').innerHTML = html)
+        .catch(err => console.error('Header load failed:', err));
+    });
+  </script>
+
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-container">
       <h1>About LEM Building Surveying Ltd</h1>
-      <p>
-        We are an independent firm of professional building surveyors, dedicated to providing expert property assessments and reports for homeowners, investors, landlords, and commercial clients.
-      </p>
-      <a href="../contact.html" class="cta-button">Get in Touch</a></div>
+      <h2 class="hero-subtitle">Independent, experienced and approachable—clear, honest advice for every home buyer.</h2>
+      <a href="/enquiry.html" class="cta-button hero-contrast">Request a Free Quote</a>
     </div>
   </section>
-  
-  <!-- MAIN CONTENT SECTION -->
-  <section class="rics-surveys">
-    <div class="box-container">
-      <h2>Our Mission</h2>
-      <p>
-        Our mission is to deliver clear, accurate, and actionable insights to every client. We believe that by offering thorough investigations and jargon-free reports, we empower you to understand your property’s condition and plan confidently for the future.
-      </p>
-      <h2>Our Approach</h2>
-      <h3>Attention to Detail</h3>
-      <p>
-        Each inspection is carried out with meticulous care, ensuring no issue goes unnoticed.
-      </p>
-      <h3>Client-Centric Service</h3>
-      <p>
-        We tailor our reports and advice to your unique needs—whether you’re a first-time buyer or a seasoned property professional.
-      </p>
-      <h3>Industry Standards</h3>
-      <p>
-        Although we are not regulated by RICS, we follow the RICS Home Survey Standards to ensure consistency and reliability.
-      </p>
-      <h3>Local Expertise</h3>
-      <p>
-        Our deep knowledge of the local property market helps us quickly identify common issues and provide practical recommendations.
-      </p>
-      <h3>Integrity and Professionalism</h3>
-      <p>
-        We uphold transparency and ethical conduct in all our interactions, ensuring you can trust our advice.
-      </p>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li><strong>Comprehensive Services:</strong> From RICS Home Surveys to Damp Surveys, Measured Surveys, and EPCs with Floorplans.</li>
-        <li><strong>Personalized Guidance:</strong> We tailor our services to your specific property needs.</li>
-        <li><strong>Clear Reporting:</strong> Our reports break down complex issues into straightforward, actionable advice.</li>
-        <li><strong>Proactive Advice:</strong> We offer guidance on maintenance and repairs to help preserve your property’s value.</li>
-      </ul>
-      
-      <!-- Centralized CTA Section -->
-      <div class="cta-section">
-        <h2>Get in Touch</h2>
-        <p>Ready to learn more about our services or schedule a survey?</p>
-        <a href="contact.html" class="cta-button">Contact us today!</a>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="about-box">
+      <div class="box-container">
+        <h2>Who We Are</h2>
+        <p><strong>LEM Building Surveying Ltd</strong> is owned and run by <strong>Liam Butler BSc AssocRICS MRPSA</strong>, an independent surveyor serving Deeside, Chester, Flintshire and the wider North West.</p>
+        <p>Liam brings a personal, hands-on approach to every instruction—combining technical knowledge with calm, practical reporting that helps you make informed decisions about your property.</p>
+
+        <h2>Meet Liam</h2>
+        <p>Liam holds a <strong>BSc in Building Surveying</strong> and is an <strong>Associate Member of RICS</strong> and a <strong>Member of the Residential Property Surveyors Association (MRPSA)</strong>.</p>
+        <p>With over seven years’ dedicated surveying experience, he’s inspected everything from Victorian terraces and pre-1930s homes to modern apartments and timber-frame builds. His strengths lie in defect diagnosis, energy-efficiency reporting and providing plain-English advice without alarmism.</p>
+
+        <h2>Why Choose Us?</h2>
+        <ul class="why-choose-list">
+          <li><strong>Truly Independent:</strong> No estate-agent ties or repair sales—just impartial advice based on what’s best for you.</li>
+          <li><strong>Fast Turnaround:</strong> Reports typically delivered within 48–72 hours of inspection.</li>
+          <li><strong>Local Knowledge:</strong> Deep insight into local housing—from shallow sandstone footings common in Chester terraces to clay-movement risk zones in Flintshire.</li>
+          <li><strong>Friendly & Honest:</strong> Clients often comment on Liam’s reassuring, straightforward approach—especially when urgent defects are flagged.</li>
+        </ul>
       </div>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
-  </footer>
-  
+    </section>
+
+  <!-- TESTIMONIALS -->
+  <div id="testimonials-include"></div>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("../header.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("header-include").innerHTML = data;
-        })
-        .catch(err => console.error("Header include failed:", err));
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/testimonials.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('testimonials-include').innerHTML = html)
+        .catch(err => console.error('Testimonials include failed:', err));
     });
+  </script>
+
+    <!-- SERVICE AREA DROPDOWN -->
+<section class="home-areas improved-areas">
+  <div class="box-container">
+    <!-- 1. Header column -->
+    <div class="areas-header">
+      <h2>Areas We Cover</h2>
+      <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
+    </div>
+
+    <!-- 2. Content column -->
+    <div class="areas-content">
+      <!-- a) Styled select card -->
+      <div class="dropdown-card">
+        <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
+        <div class="custom-select">
+          <select id="areaDropdown" onchange="handleAreaSelect(this)">
+            <option value="">Select an area…</option>
+            <option value="/connahs-quay.html">Connah’s Quay</option>
+            <option value="/buckley.html">Buckley</option>
+            <option value="/hawarden.html">Hawarden</option>
+            <option value="/ewloe.html">Ewloe</option>
+            <option value="/deeside.html">Deeside</option>
+            <option value="/broughton.html">Broughton</option>
+            <option value="/flintshire.html">Flintshire</option>
+            <option value="/chester.html">Chester</option>
+            <option value="/cheshire.html">Cheshire</option>
+            <option value="/northop.html">Northop</option>
+            <option value="/northop-hall.html">Northop Hall</option>
+            <option value="/mold.html">Mold</option>
+            <option value="/north-west-of-england.html">North West of England</option>
+          </select>
+          <span class="chevron">⌄</span>
+        </div>
+      </div>
+</section>
+
+<script>
+  function handleAreaSelect(select) {
+    if (select.value) window.location.href = select.value;
+  }
+</script>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <a href="/enquiry.html" class="cta-button">Speak to Liam</a>
+  </div>
+
+  <!-- Shared Footer -->
+  <div id="footer-include"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html)
+        .catch(err => console.error('Footer load failed:', err));
+    });
+
+    function handleAreaSelect(select) {
+      if (select.value) window.location.href = select.value;
+    }
   </script>
 </body>
 </html>

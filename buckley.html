@@ -1,1 +1,73 @@
-<html><head><title>Buckley Surveys</title></head><body><h1>Buckley Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Surveyor in Buckley | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor serving Buckley. RICS Home Surveys, Damp & Timber Reports, Floorplans and more from LEM Building Surveying Ltd." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Building Surveyor in Buckley</h1>
+      <p>
+        Clear, trusted property surveys in Buckley—RICS reports, damp inspections, floorplans and more.
+      </p>
+      <a href="/enquiry.html" class="cta-button">Request a Survey</a>
+    </div>
+  </section>
+
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Expert Property Surveys in Buckley</h2>
+      <p>
+        Based locally in Deeside, we provide high-quality surveying services for homeowners, buyers, and landlords across Buckley. Whether you’re purchasing a home or investigating damp issues, we deliver reliable, independent reporting.
+      </p>
+
+      <h2>Surveying Services Available</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> A popular mid-level survey with advice on defects, repairs, and maintenance.</li>
+        <li><strong>RICS Level 3 Building Survey:</strong> In-depth reporting for older or modified properties, including structural review.</li>
+        <li><strong>Damp & Timber Surveys:</strong> Assess signs of rising damp, condensation, mould or timber decay.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Scaled, accurate drawings for extensions, sales, or records.</li>
+        <li><strong>Ventilation Assessments:</strong> Identify poor airflow and improve indoor air quality.</li>
+      </ul>
+
+      <h2>Why LEM Building Surveying?</h2>
+      <ul>
+        <li><strong>Independent & Local:</strong> We’re based in Deeside and understand the common construction types and issues in Buckley.</li>
+        <li><strong>Tailored Support:</strong> Speak directly with Liam—no call centres, no sales pressure.</li>
+        <li><strong>Clarity & Confidence:</strong> Our reports are easy to understand, with practical next steps clearly explained.</li>
+      </ul>
+
+      <h2>Ask a Question or Get a Quote</h2>
+      <p>
+        Use the form below or get in touch for friendly, no-obligation advice. We’re happy to help at any stage of your property journey.
+      </p>
+
+      <p>
+        <a href="/services.html" class="cta-button">Explore All Services</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header via JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header-include').innerHTML = html)
+      .catch(err => console.error('Header include failed:', err));
+
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer-include').innerHTML = html)
+      .catch(err => console.error('Footer include failed:', err));
+  });
+</script>

@@ -1,1 +1,78 @@
-<html><head><title>Ewloe Surveys</title></head><body><h1>Ewloe Home & Building Surveys</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Building Surveys in Ewloe | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveys in Ewloe. RICS Home Surveys, Damp & Timber Reports, and expert advice from a local Deeside-based surveyor." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Home & Building Surveys in Ewloe</h1>
+      <p>RICS Home Surveys, Damp Reports & more—delivered with clarity, integrity, and expert local knowledge.</p>
+      <a href="/enquiry.html" class="cta-button">Request Your Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Trusted Property Surveys in Ewloe</h2>
+      <p>
+        Based in Deeside and serving Ewloe and the surrounding area, LEM Building Surveying Ltd offers a full range of independent surveying services. Whether you're buying your first home or managing a portfolio, we provide clear, professional advice you can rely on.
+      </p>
+
+      <h2>Our Surveying Services</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> A thorough Homebuyer Report ideal for most conventional properties, highlighting urgent issues and general condition.</li>
+        <li><strong>RICS Level 3 Home Survey:</strong> A comprehensive Building Survey with detailed insights into structural condition—ideal for older or altered properties.</li>
+        <li><strong>Damp & Timber Reports:</strong> Investigation and reporting on damp, mould, timber decay, and ventilation problems, with practical recommendations.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate floorplans and property measurements for extensions, records, and planning.</li>
+        <li><strong>EPCs with Floorplans:</strong> Combined Energy Performance Certificate and detailed floorplan—ideal for listings, compliance, and property marketing.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Helping improve airflow and identify causes of condensation and mould.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Independent & Local:</strong> No sales targets or third-party affiliations—just honest, qualified advice from a surveyor based in Deeside.</li>
+        <li><strong>Clear & Helpful Reports:</strong> Easy-to-understand findings with photos and straightforward recommendations.</li>
+        <li><strong>Fast Turnaround:</strong> Most reports delivered within 3–5 working days of inspection.</li>
+      </ul>
+
+      <h2>Areas We Cover</h2>
+      <p>We serve homeowners, buyers and landlords across Ewloe, Buckley, Hawarden, Broughton, Deeside and the wider Flintshire and Chester areas.</p>
+
+      <!-- CTA SECTION -->
+      <div class="cta-section">
+        <h2>Book Your Survey in Ewloe</h2>
+        <p>Call <a href="tel:07378732037">07378 732037</a> or <a href="/enquiry.html">submit your details online</a> for a free, no-obligation quote.</p>
+        <a href="/services.html" class="cta-button">See All Surveying Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-include").innerHTML = html;
+        })
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>

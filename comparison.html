@@ -1,77 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compare RICS Level 1, 2, and 3 home surveys with LEM Building Surveying Ltd. Find the right survey for your property.">
-    <meta name="keywords" content="RICS Survey Comparison, Home Surveys, Level 1, Level 2, Level 3, Property Surveys, Connah’s Quay, Deeside, Flintshire">
-    <meta name="author" content="LEM Building Surveying Ltd">
-    <title>Survey Comparison | LEM Building Surveying Ltd</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare RICS Home Survey Levels | Level 1, 2 & 3 | LEM Building Surveying</title>
+  <meta name="description" content="Not sure which RICS Home Survey you need? Compare Level 1, Level 2 (HomeBuyer Report), and Level 3 (Building Survey) to choose the right one for your property.">
+  <meta name="keywords" content="RICS Home Survey Comparison, RICS Survey Levels, Level 1 Survey, Level 2 HomeBuyer Report, Level 3 Building Survey, Property Surveyor Deeside Chester Flintshire">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .comparison-table {
+      min-width: 600px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1em;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .comparison-table th {
+      background-color: #f4f4f4;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXH0EY936M');
+</script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>LEM Building Surveying Ltd</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="comparison.html" class="active">Survey Comparison</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="enquiry.html" class="cta">Get a Quote</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
 
-    <section class="comparison-intro">
-        <div class="container">
-            <h2>Survey Comparison</h2>
-            <p>Not sure which survey is right for you? Compare the options below.</p>
-        </div>
-    </section>
+  <!-- INTRO SECTION -->
+  <section class="comparison-intro">
+    <div class="container">
+      <h1>Compare RICS Survey Levels</h1>
+      <p>
+        Unsure which home survey is right for your property? Use the table below to compare the three RICS-approved survey levels—so you can choose the most appropriate option with confidence.
+      </p>
+      <p>
+        All surveys follow the <strong>RICS Home Survey Standard</strong> and are carried out by an independent local expert.
+      </p>
+    </div>
+  </section>
 
-    <section class="comparison-table">
-        <div class="container">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Survey Type</th>
-                        <th>Scope</th>
-                        <th>Suitable For</th>
-                        <th>Starting Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>RICS Level 1 Home Survey (Home Condition Survey)</strong></td>
-                        <td>Basic condition report identifying visible defects without repair costs.</td>
-                        <td>Modern properties in good condition.</td>
-                        <td>From £350</td>
-                    </tr>
-                    <tr>
-                        <td><strong>RICS Level 2 Home Survey (Home Buyer Survey)</strong></td>
-                        <td>Detailed survey including assessment of significant defects, repair guidance, and maintenance advice.</td>
-                        <td>Standard properties.</td>
-                        <td>From £450</td>
-                    </tr>
-                    <tr>
-                        <td><strong>RICS Level 3 Home Survey (Building Survey)</strong></td>
-                        <td>Comprehensive structural survey identifying potential defects and providing expert recommendations.</td>
-                        <td>Older, extended, or non-standard properties.</td>
-                        <td>From £550</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+  <!-- COMPARISON TABLE SECTION -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="table-scroll">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Survey Level</th>
+              <th>What’s Included</th>
+              <th>Best For</th>
+              <th>Starting Price</th>
+              <th>More Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Level 1</strong><br>Condition Report</td>
+              <td>
+                Visual checks of accessible areas. Identifies urgent issues. Traffic-light ratings only. No repair advice.
+              </td>
+              <td>
+                Newer or well-maintained homes under 10 years old with no obvious problems.
+              </td>
+              <td>From £350</td>
+              <td><a href="/level-1.html">Find out more →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Level 2</strong><br>HomeBuyer Report</td>
+              <td>
+                All Level 1 checks plus advice on repairs, ongoing maintenance.
+              </td>
+              <td>
+                Conventional properties in reasonable condition built from standard materials.
+              </td>
+              <td>From £450</td>
+              <td><a href="/level-2.html">Find out more →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Level 3</strong><br>Building Survey</td>
+              <td>
+                Full structural analysis of materials, defects, causes, and repair options. Optional costings and additional tests.
+              </td>
+              <td>
+                Older, extended, listed or non-standard properties—or homes needing renovation.
+              </td>
+              <td>From £550</td>
+              <td><a href="/level-3.html">Find out more →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need Help Choosing?</h2>
+      <p>
+        Still not sure which survey suits your property? Liam is happy to help. Get in touch for honest, expert advice with no pressure.
+      </p>
+      <a href="/contact.html" class="cta-button">Speak to Liam</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header via JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header-include').innerHTML = html)
+      .catch(err => console.error('Header include failed:', err));
+
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer-include').innerHTML = html)
+      .catch(err => console.error('Footer include failed:', err));
+  });
+</script>

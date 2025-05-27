@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Building Surveys in Flintshire | LEM Building Surveying Ltd</title>
+  <meta name="description" content="RICS Home Surveys, Damp Reports and Building Surveys across Flintshire. Professional, local property surveyor based in Deeside." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Home & Building Surveys in Flintshire</h1>
+      <p>Independent, professional property surveys and damp assessments across Flintshire from a local surveyor you can trust.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Trusted Flintshire Surveyor</h2>
+      <p>
+        Based in Deeside and serving all of Flintshire, LEM Building Surveying Ltd offers reliable, impartial property inspections. Whether you're buying, letting, or maintaining a property, we provide expert insight into its condition and potential issues.
+      </p>
+
+      <h2>Property Survey Services in Flintshire</h2>
+      <ul>
+        <li><strong>RICS Level 2 Home Survey:</strong> A practical report for conventional homes, helping you understand visible defects and future maintenance needs.</li>
+        <li><strong>RICS Level 3 Home Survey:</strong> In-depth structural analysis and professional advice—ideal for older, larger, or altered homes.</li>
+        <li><strong>Damp & Timber Reports:</strong> Thorough assessments of mould, rising damp, woodworm, rot, and other moisture-related problems.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Scaled drawings and floorplans, perfect for renovation projects, extensions, or planning submissions.</li>
+        <li><strong>Residential Ventilation Assessments:</strong> Evaluate extractor fan performance and internal airflow to resolve persistent condensation issues.</li>
+      </ul>
+      <li><a href="/services.html">View All Services Offered</a></li>
+
+      <h2>Why Choose Us for Surveys in Flintshire?</h2>
+      <ul>
+        <li><strong>Deeside-Based:</strong> Local to Flintshire with a strong understanding of regional construction methods and common problems.</li>
+        <li><strong>Independent & RICS-Aligned:</strong> You receive clear, unbiased reports—no sales pitch or conflict of interest.</li>
+        <li><strong>Timely Reports:</strong> Most surveys are turned around in 3–5 working days.</li>
+      </ul>
+
+      <h2>Areas We Cover in Flintshire</h2>
+      <p>Connah’s Quay, Buckley, Ewloe, Hawarden, Mold, Shotton, Broughton, and across the whole of Flintshire.</p>
+
+      <!-- CTA SECTION -->
+      <div class="cta-section">
+        <h2>Book a Flintshire Survey Today</h2>
+        <p>Contact <a href="tel:07378732037">07378 732037</a> or <a href="/enquiry.html">send a request online</a>.</p>
+        <a href="/services.html" class="cta-button">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("header-include").innerHTML = html;
+        })
+        .catch((err) => console.error("Header include failed:", err));
+    });
+  </script>
+</body>
+</html>
