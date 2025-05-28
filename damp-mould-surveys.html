@@ -9,21 +9,32 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <!-- Shared Header -->
-<div id="header-include"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/header.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('header-include').innerHTML = html);
-  });
-</script>
+  
+  <!-- ░░ HEADER ░░ -->
+<header>
+    <div class="header-inner">
+      <div class="branding">
+        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
+          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
+          <span class="site-name">LEM Building Surveying Ltd.</span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
+          
+          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-container">
       <h1>Damp &amp; Mould Surveys</h1>
-      <p>Independent, expert damp & mould assessments for homeowners, landlords & property buyers.</p>
+      <p>Independent, expert damp & mould assessments for homeowners, landlords, buyers & social housing providers.</p>
       <a href="/enquiry.html" class="cta-button">Request a Survey</a>
     </div>
   </section>
@@ -45,6 +56,7 @@
         <li><strong>Homeowners:</strong> Mould patches, damp walls, or musty odours.</li>
         <li><strong>Landlords:</strong> Compliant, impartial reports for tenant concerns or housing regulations.</li>
         <li><strong>Buyers:</strong> Reassurance before purchasing a property with visible or suspected damp issues.</li>
+        <li><strong>Social Housing Providers:</strong> Independent assessments for housing stock management or disrepair claims.</li>
       </ul>
 
       <h2>What You’ll Receive</h2>
@@ -59,7 +71,10 @@
         <li><strong>Completely Impartial:</strong> No affiliations with treatment providers—just honest, expert advice.</li>
         <li><strong>RICS-Aligned Expertise:</strong> Assessments aligned with RICS principles for consistent quality.</li>
         <li><strong>Local Knowledge:</strong> Experienced with local property types and common damp issues.</li>
+        <li><strong>No Sales Agenda:</strong> Unlike many damp-proofing firms, we focus solely on diagnosis—not selling treatments.</li>
       </ul>
+
+      <p>Looking for broader property insights? Explore our <a href="/rics-home-surveys">RICS Home Surveys</a> or view all <a href="/services">building services</a>.</p>
 
       <h2>Frequently Asked Questions</h2>
       <p><em>Below are common queries about our damp & mould inspection services:</em></p>
@@ -71,52 +86,49 @@
       <p>Absolutely. We assess all relevant ventilation systems thoroughly.</p>
       <h3>Do you recommend contractors for repairs?</h3>
       <p>We can suggest types of specialists but have no commercial affiliations, ensuring unbiased recommendations.</p>
-
-      <!-- SERVICE AREA DROPDOWN -->
-<section class="home-areas improved-areas">
-  <div class="box-container">
-    <!-- 1. Header column -->
-    <div class="areas-header">
-      <h2>Areas We Cover</h2>
-      <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
     </div>
+  </section>
 
-    <!-- 2. Content column -->
-    <div class="areas-content">
-      <!-- a) Styled select card -->
-      <div class="dropdown-card">
-        <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
-        <div class="custom-select">
-          <select id="areaDropdown" onchange="handleAreaSelect(this)">
-            <option value="">Select an area…</option>
-            <option value="/connahs-quay.html">Connah’s Quay</option>
-            <option value="/buckley.html">Buckley</option>
-            <option value="/hawarden.html">Hawarden</option>
-            <option value="/ewloe.html">Ewloe</option>
-            <option value="/deeside.html">Deeside</option>
-            <option value="/broughton.html">Broughton</option>
-            <option value="/flintshire.html">Flintshire</option>
-            <option value="/chester.html">Chester</option>
-            <option value="/cheshire.html">Cheshire</option>
-            <option value="/northop.html">Northop</option>
-            <option value="/northop-hall.html">Northop Hall</option>
-            <option value="/mold.html">Mold</option>
-            <option value="/north-west-of-england.html">North West of England</option>
-          </select>
-          <span class="chevron">⌄</span>
-        </div>
+  <!-- SERVICE AREA DROPDOWN -->
+  <section class="home-areas improved-areas">
+    <div class="box-container">
+      <div class="areas-header">
+        <h2>Areas We Cover</h2>
+        <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas.</p>
       </div>
+      <div class="areas-content">
+        <div class="dropdown-card">
+          <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
+          <div class="custom-select">
+            <select id="areaDropdown" onchange="handleAreaSelect(this)">
+              <option value="">Select an area…</option>
+              <option value="/connahs-quay.html">Connah’s Quay</option>
+              <option value="/buckley.html">Buckley</option>
+              <option value="/hawarden.html">Hawarden</option>
+              <option value="/ewloe.html">Ewloe</option>
+              <option value="/deeside.html">Deeside</option>
+              <option value="/broughton.html">Broughton</option>
+              <option value="/flintshire.html">Flintshire</option>
+              <option value="/chester.html">Chester</option>
+              <option value="/cheshire.html">Cheshire</option>
+              <option value="/northop.html">Northop</option>
+              <option value="/northop-hall.html">Northop Hall</option>
+              <option value="/mold.html">Mold</option>
+              <option value="/north-west-of-england.html">North West of England</option>
+            </select>
+            <span class="chevron">⌄</span>
+          </div>
+        </div>
+        <p class="note"><strong>…and nearby towns across the region.</strong></p>
+      </div>
+    </div>
+  </section>
 
-    <!-- 3. Footer note spans both columns -->
-    <p class="note"><strong>…and nearby towns across the region.</strong></p>
-  </div>
-</section>
-
-<script>
-  function handleAreaSelect(select) {
-    if (select.value) window.location.href = select.value;
-  }
-</script>
+  <script>
+    function handleAreaSelect(select) {
+      if (select.value) window.location.href = select.value;
+    }
+  </script>
 
   <!-- FINAL CTA -->
   <section class="home-get-started">
@@ -136,12 +148,12 @@
 
   <!-- Footer -->
   <div id="footer-include"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/footer.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('footer-include').innerHTML = html);
-  });
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html);
+    });
+  </script>
 </body>
 </html>
