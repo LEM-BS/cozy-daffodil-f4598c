@@ -56,7 +56,8 @@ header {
 .main-nav a {
   color: #fff; text-decoration: none; font-weight: bold;
   padding: 7px 13px; border-radius: 6px;
-  transition: background .2s; font-size: 1rem;
+  transition: background .2s;
+  font-size: 1rem;
 }
 .main-nav li a:hover { background: var(--hover-blue); }
 .main-nav a.cta {
@@ -65,40 +66,6 @@ header {
 .main-nav a.cta:hover { background: var(--hover-blue); }
 .main-nav a[aria-current="page"] {
   border-bottom: 2px solid #fff;
-}
-
-/*──────────────────────────────────────────────
-  HEADER DROPDOWN FIXED
-──────────────────────────────────────────────*/
-.main-nav li { position: relative; }
-.main-nav .has-submenu > a {
-  display: flex; align-items: center; cursor: pointer;
-}
-.main-nav .has-submenu .chevron {
-  margin-left: 0.25em; transition: transform .2s;
-}
-.main-nav .submenu {
-  display: none;
-  position: absolute; top: 100%; left: 0;
-  background: var(--card-bg);
-  box-shadow: var(--shadow);
-  border-radius: var(--border-radius);
-  white-space: nowrap;
-  z-index: 100;
-}
-/* show only on .open */
-.main-nav .has-submenu.open > .submenu {
-  display: block !important;
-}
-.has-submenu.open .chevron {
-  transform: rotate(180deg);
-}
-.main-nav .submenu li a {
-  padding: .5rem 1rem; display: block;
-  color: var(--text-main);
-}
-.main-nav .submenu li a:hover {
-  background: var(--soft-bg);
 }
 
 /*──────────────────────────────────────────────
@@ -248,7 +215,8 @@ details {
   background: var(--card-bg); border-radius: 6px; padding: 1rem;
   margin: 1.2rem 0; box-shadow: var(--shadow);
   overflow: hidden; transition: max-height .3s;
-  max-height: 2.5rem; border: 1px solid var(--divider-grey);
+  max-height: 2.5rem;
+  border: 1px solid var(--divider-grey);
 }
 details[open] { max-height: 100vh; }
 summary {
@@ -356,16 +324,43 @@ form button:hover, .quote-form button:hover {
 }
 
 /*──────────────────────────────────────────────
-  15. AREAS WE COVER / DROPDOWN SECTION
+  14. SLIDER (Testimonials & Services)
+──────────────────────────────────────────────*/
+.service-slider-wrapper, .testimonial-slider-wrapper {
+  position: relative; margin: 2rem 0;
+}
+.service-slider, .testimonial-slider {
+  display: flex; gap: 1rem; overflow-x: auto;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+.service-slider .service-card, .testimonial-slider .testimonial {
+  flex: 0 0 80%; scroll-snap-align: start;
+}
+.service-slider::-webkit-scrollbar, .testimonial-slider::-webkit-scrollbar { display: none; }
+.service-slider, .testimonial-slider { -ms-overflow-style: none; scrollbar-width: none; }
+.slider-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: var(--accent-blue); color: #fff; border: none;
+  font-size: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  cursor: pointer; z-index: 10; box-shadow: var(--shadow);
+  opacity: 0.92;
+}
+.slider-arrow.prev { left: .5rem; }
+.slider-arrow.next { right: .5rem; }
+.slider-arrow:focus { outline: 2px solid var(--hover-blue); }
+
+/*──────────────────────────────────────────────
+  15. “AREAS WE COVER” / DROPDOWN SECTION
 ──────────────────────────────────────────────*/
 .improved-areas .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(16rem,30vw,24rem),1fr));
+  grid-template-columns: repeat(auto-fit, minmax( clamp(16rem,30vw,24rem), 1fr ));
   gap: clamp(1rem,5vw,3rem);
 }
 .improved-areas .areas-header,
 .improved-areas .areas-content {
-  display: grid; gap: 1.5rem;
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem;
 }
 .improved-areas .areas-header .lead {
   color: var(--text-light); font-size: 1.1rem; margin-bottom: 2rem;
@@ -380,19 +375,35 @@ form button:hover, .quote-form button:hover {
 .improved-areas select#areaDropdown {
   width: 100%; padding: .75rem 1rem; font-size: 1rem;
   border: 1px solid var(--divider-grey); border-radius: 7px;
-  background: #fff; appearance: none; cursor: pointer;
+  background: #fff; appearance: none;
+  cursor: pointer;
 }
 .improved-areas .chevron {
   position: absolute; top: 50%; right: 1rem;
-  transform: translateY(-50%); font-size: 1.25rem;
-  color: var(--text-light); pointer-events: none;
+  transform: translateY(-50%); font-size: 1.25rem; color: var(--text-light);
+  pointer-events: none;
 }
 
 /*──────────────────────────────────────────────
-  16. TRUST FEATURES (LEGACY LIST) [deprecated]
+  16. TRUST FEATURES (Icons + Headings)
 ──────────────────────────────────────────────*/
 .trust-list {
-  /* no longer used; replaced by .trust-grid + .trust-card */
+  list-style: none; padding: 0; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.3rem;
+  justify-items: center;
+}
+.trust-list li {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.trust-list svg {
+  color: var(--accent-blue); margin-bottom: .6rem;
 }
 
 /*──────────────────────────────────────────────
@@ -413,10 +424,182 @@ form button:hover, .quote-form button:hover {
 }
 
 /*──────────────────────────────────────────────
-  18. MISCELLANEOUS
+  18. MISC (Table soft wraps, slider arrow tweaks)
 ──────────────────────────────────────────────*/
-.comparison-table th,
-.comparison-table td {
-  word-wrap: break-word;
-  hyphens: auto;
+.comparison-table th, .comparison-table td {
+  word-wrap: break-word; hyphens: auto;
+}
+
+/*──────────────────────────────────────────────
+ 11. TESTIMONIALS SLIDER — LIGHT, MODERN VERSION
+──────────────────────────────────────────────*/
+.testimonial-section {
+  background: var(--soft-bg); /* Light background */
+  color: var(--text-main);
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+.testimonial-section .box-container {
+  background: transparent;
+  box-shadow: none;
+  max-width: 900px;
+}
+.testimonial-section h2 {
+  color: var(--accent-blue); /* Main action blue for heading */
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.service-slider-wrapper {
+  position: relative;
+}
+.service-slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1.5rem;
+}
+.service-slider .service-card {
+  background: var(--card-bg);        /* White card */
+  color: var(--text-main);           /* Main text color */
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  min-width: 340px; max-width: 400px; margin: 0 auto;
+  box-shadow: var(--shadow);
+  text-align: left;
+  scroll-snap-align: center;
+  border: 1px solid var(--divider-grey);
+  transition: box-shadow .18s, border-color .18s;
+}
+.service-slider .service-card:hover {
+  box-shadow: 0 8px 24px rgba(34,49,74,0.18);
+  border-color: var(--accent-blue);
+}
+@media (max-width: 500px) {
+  .service-slider .service-card { min-width: 220px; padding: 1.3rem 1rem;}
+}
+
+.stars {
+  color: #ffc43a;                /* Gold for stars */
+  font-size: 1.45em;
+  font-weight: bold;
+  letter-spacing: .13em;
+  margin-bottom: .7rem;
+}
+
+.service-card footer {
+  font-size: .97em;
+  color: var(--accent-blue);      /* Action blue for name */
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.slider-arrow {
+  position: absolute; top: 48%; transform: translateY(-50%);
+  background: #ffc43a;           /* Gold arrow */
+  color: var(--primary-blue);    /* Navy icon */
+  border: none;
+  font-size: 2.1rem;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer; z-index: 10; opacity: 0.94;
+  box-shadow: 0 2px 10px rgba(34,49,74,0.12);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .23s, color .23s;
+}
+.slider-arrow.prev { left: -1rem; }
+.slider-arrow.next { right: -1rem; }
+.slider-arrow:focus {
+  outline: 3px solid var(--accent-blue);
+  background: var(--primary-blue);
+  color: #ffc43a;
+}
+@media (max-width: 900px) {
+  .slider-arrow.prev { left: 0.3rem; }
+  .slider-arrow.next { right: 0.3rem; }
+}
+
+/* Trust / Why Choose grid (mirrors .process-timeline) */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trust-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ensure all cards are same height */
+  min-height: 200px;
+}
+
+/* Icon styling (optional) */
+.trust-card svg {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color, #1d4ed8);
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Headings & paragraphs inside card */
+.trust-card strong {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.trust-card p {
+  margin: 0;
+  color: #555;
+  flex-grow: 1; /* push CTA (if any) down */
+}
+
+/* Utility: blue section title */
+.section-title--blue {
+  color: var(--primary);       /* whatever your “blue” variable is */
+  margin-bottom: 1rem;
+}
+
+/* Make box-container look like your timeline card */
+.box-container {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Trust-features grid (already in place) */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+/* Centre the jump-to links */
+.jump-to {
+  text-align: center;
+}
+.jump-to .toc-list {
+  display: inline-block;     /* so the UL itself is centred */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jump-to .toc-list li {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+/* Adjust section-title bottoms for balance */
+.trust-features .section-title--blue,
+.process-timeline .section-title--blue {
+  margin-bottom: 1.5rem;
 }
