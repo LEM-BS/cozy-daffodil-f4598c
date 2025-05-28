@@ -520,3 +520,43 @@ form button:hover, .quote-form button:hover {
   .slider-arrow.prev { left: 0.3rem; }
   .slider-arrow.next { right: 0.3rem; }
 }
+
+/* Trust / Why Choose grid (mirrors .process-timeline) */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trust-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ensure all cards are same height */
+  min-height: 200px;
+}
+
+/* Icon styling (optional) */
+.trust-card svg {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color, #1d4ed8);
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Headings & paragraphs inside card */
+.trust-card strong {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.trust-card p {
+  margin: 0;
+  color: #555;
+  flex-grow: 1; /* push CTA (if any) down */
+}
