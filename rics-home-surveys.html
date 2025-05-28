@@ -141,17 +141,6 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <div id="testimonials-include"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/testimonials.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('testimonials-include').innerHTML = html)
-        .catch(err => console.error('Testimonials include failed:', err));
-    });
-  </script>
-
   <!-- Trust Features -->
   <section class="trust-features">
     <ul class="trust-list">
@@ -187,156 +176,7 @@
       </li>
     </ul>
   </section>
-
-  <!-- AREAS WE COVER -->
-  <section class="home-areas improved-areas">
-    <div class="box-container">
-      <div class="areas-header">
-        <h2>Areas We Cover</h2>
-        <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
-      </div>
-      <div class="areas-content">
-        <div class="dropdown-card">
-          <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
-          <div class="custom-select">
-            <select id="areaDropdown" onchange="handleAreaSelect(this)">
-              <option value="">Select an area…</option>
-              <option value="/connahs-quay.html">Connah’s Quay</option>
-              <option value="/buckley.html">Buckley</option>
-              <option value="/hawarden.html">Hawarden</option>
-              <option value="/ewloe.html">Ewloe</option>
-              <option value="/deeside.html">Deeside</option>
-              <option value="/broughton.html">Broughton</option>
-              <option value="/flintshire.html">Flintshire</option>
-              <option value="/chester.html">Chester</option>
-              <option value="/cheshire.html">Cheshire</option>
-              <option value="/northop.html">Northop</option>
-              <option value="/northop-hall.html">Northop Hall</option>
-              <option value="/mold.html">Mold</option>
-              <option value="/north-west-of-england.html">North West of England</option>
-            </select>
-            <span class="chevron">⌄</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    function handleAreaSelect(select) {
-      if (select.value) window.location.href = select.value;
-    }
-  </script>
-
-  <!-- MAIN CONTENT: Survey Levels, Comparison, Timeline, Fees, FAQs -->
-  <section class="rics-surveys">
-    <div class="box-container">
-      <h2>What Is a RICS Home Survey?</h2>
-      <p>RICS Home Surveys are professional property inspections conducted in line with the Royal Institution of Chartered Surveyors' standards. Whether you're a first-time buyer or experienced investor, these surveys help you uncover issues early and protect your investment.</p>
-
-      <h2>Compare RICS Survey Levels: Level 1, 2 & 3 Explained</h2>
-      <p>We offer three survey options based on RICS Home Survey Standards. <a href="/comparison.html" class="inline-link">View the full survey comparison →</a></p>
-      <section id="levels" class="survey-levels">
-        <div class="levels-grid">
-          <!-- Level 1 Card -->
-          <div class="survey-card level1">
-            <h3>Level 1 – Condition Report</h3>
-            <p>Snapshot for modern properties in good order. Flags urgent issues but omits repair cost advice.</p>
-            <details>
-              <summary>What’s included / excluded?</summary>
-              <ul class="bullet-list">
-                <li>Traffic-light ratings of visible elements</li>
-                <li>Checks damp meter readings</li>
-              </ul>
-            </details>
-            <a href="/enquiry.html?survey=level-1" class="cta-button small">Get Level 1 Quote</a>
-          </div>
-          <!-- Level 2 Card -->
-          <div class="survey-card level2">
-            <h3>Level 2 – HomeBuyer Survey</h3>
-            <p>Most popular choice. Includes photos, repair priorities and optional valuation.</p>
-            <details>
-              <summary>What’s included / excluded?</summary>
-              <ul class="bullet-list">
-                <li>Roof void & sub-floor visual checks</li>
-                <li>Advice on defects, repair urgency & risks</li>
-              </ul>
-            </details>
-            <a href="/enquiry.html?survey=level-2" class="cta-button small">Get Level 2 Quote</a>
-          </div>
-          <!-- Level 3 Card -->
-          <div class="survey-card level3">
-            <h3>Level 3 – Building Survey</h3>
-            <p>Deep dive for older, altered or high-value homes. Includes detailed repair methodology and cost guidance.</p>
-            <details>
-              <summary>What’s included / excluded?</summary>
-              <ul class="bullet-list">
-                <li>Comprehensive fabric & structure analysis</li>
-                <li>Commentary on remedial methods & timescales</li>
-              </ul>
-            </details>
-            <a href="/enquiry.html?survey=level-3" class="cta-button small">Get Level 3 Quote</a>
-          </div>
-        </div>
-      </section>
-
-      <nav class="services-toc">
-        <div class="box-container">
-          <p><strong>Jump to:</strong></p>
-          <ul class="toc-list">
-            <li><a href="#comparison">Quick Comparison</a></li>
-            <li><a href="#timeline">Process Timeline</a></li>
-            <li><a href="#levels">Survey Levels</a></li>
-            <li><a href="#cost">Typical Fees</a></li>
-            <li><a href="#faq">FAQs</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <h2>Choosing the Right Survey for Your Property</h2>
-      <h3>Property Age & Condition</h3>
-      <p>New-builds and well-maintained homes may only require a Level 1 report. Period properties or those with known issues often benefit from a Level 2 or Level 3 survey.</p>
-      <h3>Extent of Renovation or Maintenance Needed</h3>
-      <p>Level 3 surveys are essential when structural changes are planned or suspected problems exist.</p>
-      <h3>Your Long-Term Plans</h3>
-      <p>If you're investing heavily or planning to let or redevelop a property, a higher-level survey gives greater clarity and protection.</p>
-
-      <h2>Why Clients Choose LEM Building Surveying</h2>
-      <ul>
-        <li><strong>RICS Standards:</strong> Every report follows the RICS Home Survey Standard for consistency and reliability.</li>
-        <li><strong>Local Experience:</strong> In-depth knowledge of property types across Flintshire, Cheshire, and the wider North West region.</li>
-        <li><strong>Personal Service:</strong> Clear, honest advice from Liam—a qualified, independent surveyor.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- COMPARISON TABLE -->
-  <section id="comparison" class="survey-comparison">
-    <div class="box-container">
-      <h2>At-a-Glance Comparison</h2>
-      <div class="comparison-table-wrapper">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Level 1</th>
-              <th>Level 2</th>
-              <th>Level 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Best for</td><td>New builds / good order</td><td>1930s–present homes</td><td>Older, altered or large</td></tr>
-            <tr><td>Photos included</td><td>✖</td><td>✔</td><td>✔</td></tr>
-            <tr><td>Repair advice</td><td>Basic</td><td>Prioritised list</td><td>Detailed & costed</td></tr>
-            <tr><td>Roof-space check</td><td>Visual only</td><td>Visual + photos</td><td>In-depth structural</td></tr>
-            <tr><td>Report length</td><td>8–10 pages</td><td>25–35 pages</td><td>40+ pages</td></tr>
-            <tr><td>Guide fee*</td><td>from £350</td><td>from £475</td><td>from £650</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="small">*Final price depends on size, age & location — request a tailored quote.</p>
-    </div>
-  </section>
-
+  
   <!-- PROCESS TIMELINE -->
   <section id="timeline" class="process-timeline">
     <div class="box-container">
@@ -382,6 +222,226 @@
         </tbody>
       </table>
       <p class="small">POA = Price on Application. Exact quote provided within an hour of enquiry.</p>
+    </div>
+  </section>
+  
+  <!-- COMPARISON INTRO SECTION -->
+  <section class="comparison-intro">
+    <div class="container">
+      <h1>Compare RICS Survey Levels</h1>
+      <p>
+        Unsure which home survey is right for your property? Use the table below to compare the three RICS-approved survey levels—so you can choose the most appropriate option with confidence.
+      </p>
+      <p>
+        All surveys follow the <strong>RICS Home Survey Standard</strong> and are carried out by an independent local expert.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE SECTION -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="table-scroll">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Survey Level</th>
+              <th>What’s Included</th>
+              <th>Best For</th>
+              <th>Starting Price</th>
+              <th>More Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Level 1</strong><br>Condition Report</td>
+              <td>
+                Visual checks of accessible areas. Identifies urgent issues. Traffic-light ratings only. No repair advice.
+              </td>
+              <td>
+                Newer or well-maintained homes under 10 years old with no obvious problems.
+              </td>
+              <td>From £350</td>
+              <td><a href="/level-1.html">Find out more →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Level 2</strong><br>HomeBuyer Report</td>
+              <td>
+                All Level 1 checks plus advice on repairs, ongoing maintenance.
+              </td>
+              <td>
+                Conventional properties in reasonable condition built from standard materials.
+              </td>
+              <td>From £475</td>
+              <td><a href="/level-2.html">Find out more →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Level 3</strong><br>Building Survey</td>
+              <td>
+                Full structural analysis of materials, defects, causes, and repair options. Optional costings and additional tests.
+              </td>
+              <td>
+                Older, extended, listed or non-standard properties—or homes needing renovation.
+              </td>
+              <td>From £650</td>
+              <td><a href="/level-3.html">Find out more →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: Survey Levels, Comparison, Timeline, Fees, FAQs -->
+  <section class="rics-surveys">
+      <h2>What Is a RICS Home Survey?</h2>
+      <p>RICS Home Surveys are professional property inspections conducted in line with the Royal Institution of Chartered Surveyors' standards. Whether you're a first-time buyer or experienced investor, these surveys help you uncover issues early and protect your investment.</p>
+
+      <h2>Compare RICS Survey Levels: Level 1, 2 & 3 Explained</h2>
+      <p>We offer three survey options based on RICS Home Survey Standards. <a href="/comparison.html" class="inline-link">View the full survey comparison →</a></p>
+      <section id="levels" class="survey-levels">
+          <!-- Level 1 Card -->
+            <h3>Level 1 – Condition Report</h3>
+            <p>Snapshot for modern properties in good order. Flags urgent issues but omits repair cost advice.</p>
+            <details>
+              <summary>What’s included / excluded?</summary>
+              <ul class="bullet-list">
+                <li>Traffic-light ratings of visible elements</li>
+                <li>Checks damp meter readings</li>
+              </ul>
+            </details>
+            <a href="/enquiry.html?survey=level-1" class="cta-button small">Get Level 1 Quote</a>
+          <!-- Level 2 Card -->
+            <h3>Level 2 – HomeBuyer Survey</h3>
+            <p>Most popular choice. Includes photos, repair priorities and optional valuation.</p>
+            <details>
+              <summary>What’s included / excluded?</summary>
+              <ul class="bullet-list">
+                <li>Roof void & sub-floor visual checks</li>
+                <li>Advice on defects, repair urgency & risks</li>
+              </ul>
+            </details>
+            <a href="/enquiry.html?survey=level-2" class="cta-button small">Get Level 2 Quote</a>
+          <!-- Level 3 Card -->
+            <h3>Level 3 – Building Survey</h3>
+            <p>Deep dive for older, altered or high-value homes. Includes detailed repair methodology and cost guidance.</p>
+            <details>
+              <summary>What’s included / excluded?</summary>
+              <ul class="bullet-list">
+                <li>Comprehensive fabric & structure analysis</li>
+                <li>Commentary on remedial methods & timescales</li>
+              </ul>
+            </details>
+            <a href="/enquiry.html?survey=level-3" class="cta-button small">Get Level 3 Quote</a>
+          </div>
+        </div>
+      </section>
+
+      <nav class="services-toc">
+        <div class="box-container">
+          <p><strong>Jump to:</strong></p>
+          <ul class="toc-list">
+            <li><a href="#comparison">Quick Comparison</a></li>
+            <li><a href="#timeline">Process Timeline</a></li>
+            <li><a href="#levels">Survey Levels</a></li>
+            <li><a href="#cost">Typical Fees</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <h2>Choosing the Right Survey for Your Property</h2>
+      <h3>Property Age & Condition</h3>
+      <p>New-builds and well-maintained homes may only require a Level 1 report. Period properties or those with known issues often benefit from a Level 2 or Level 3 survey.</p>
+      <h3>Extent of Renovation or Maintenance Needed</h3>
+      <p>Level 3 surveys are essential when structural changes are planned or suspected problems exist.</p>
+      <h3>Your Long-Term Plans</h3>
+      <p>If you're investing heavily or planning to let or redevelop a property, a higher-level survey gives greater clarity and protection.</p>
+
+      <h2>Why Clients Choose LEM Building Surveying</h2>
+      <ul>
+        <li><strong>RICS Standards:</strong> Every report follows the RICS Home Survey Standard for consistency and reliability.</li>
+        <li><strong>Local Experience:</strong> In-depth knowledge of property types across Flintshire, Cheshire, and the wider North West region.</li>
+        <li><strong>Personal Service:</strong> Clear, honest advice from Liam—a qualified, independent surveyor.</li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- TESTIMONIALS -->
+  <div id="testimonials-include"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/testimonials.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('testimonials-include').innerHTML = html)
+        .catch(err => console.error('Testimonials include failed:', err));
+    });
+  </script>
+  
+  <!-- AREAS WE COVER -->
+  <section class="home-areas improved-areas">
+    <div class="box-container">
+      <div class="areas-header">
+        <h2>Areas We Cover</h2>
+        <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
+      </div>
+      <div class="areas-content">
+        <div class="dropdown-card">
+          <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
+          <div class="custom-select">
+            <select id="areaDropdown" onchange="handleAreaSelect(this)">
+              <option value="">Select an area…</option>
+              <option value="/connahs-quay.html">Connah’s Quay</option>
+              <option value="/buckley.html">Buckley</option>
+              <option value="/hawarden.html">Hawarden</option>
+              <option value="/ewloe.html">Ewloe</option>
+              <option value="/deeside.html">Deeside</option>
+              <option value="/broughton.html">Broughton</option>
+              <option value="/flintshire.html">Flintshire</option>
+              <option value="/chester.html">Chester</option>
+              <option value="/cheshire.html">Cheshire</option>
+              <option value="/northop.html">Northop</option>
+              <option value="/northop-hall.html">Northop Hall</option>
+              <option value="/mold.html">Mold</option>
+              <option value="/north-west-of-england.html">North West of England</option>
+            </select>
+            <span class="chevron">⌄</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function handleAreaSelect(select) {
+      if (select.value) window.location.href = select.value;
+    }
+  </script>
+
+  <!-- COMPARISON TABLE -->
+  <section id="comparison" class="survey-comparison">
+    <div class="box-container">
+      <h2>At-a-Glance Comparison</h2>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Level 1</th>
+              <th>Level 2</th>
+              <th>Level 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Best for</td><td>New builds / good order</td><td>1930s–present homes</td><td>Older, altered or large</td></tr>
+            <tr><td>Photos included</td><td>✖</td><td>✔</td><td>✔</td></tr>
+            <tr><td>Repair advice</td><td>Basic</td><td>Prioritised list</td><td>Detailed & costed</td></tr>
+            <tr><td>Roof-space check</td><td>Visual only</td><td>Visual + photos</td><td>In-depth structural</td></tr>
+            <tr><td>Report length</td><td>8–10 pages</td><td>25–35 pages</td><td>40+ pages</td></tr>
+            <tr><td>Guide fee*</td><td>from £350</td><td>from £475</td><td>from £650</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">*Final price depends on size, age & location — request a tailored quote.</p>
     </div>
   </section>
 

@@ -520,3 +520,24 @@ form button:hover, .quote-form button:hover {
   .slider-arrow.prev { left: 0.3rem; }
   .slider-arrow.next { right: 0.3rem; }
 }
+
+<style>
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .comparison-table {
+    min-width: 600px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  .comparison-table th {
+    background-color: #f4f4f4;
+  }
+</style>
