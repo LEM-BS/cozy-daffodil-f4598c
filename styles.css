@@ -603,3 +603,139 @@ form button:hover, .quote-form button:hover {
 .process-timeline .section-title--blue {
   margin-bottom: 1.5rem;
 }
+
+/*──────────────────────────────────────────────
+  HEADER DROPDOWN
+──────────────────────────────────────────────*/
+.main-nav li { position: relative; }
+.main-nav .has-submenu > a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.main-nav .has-submenu .chevron {
+  margin-left: 0.25em;
+  transition: transform .2s;
+}
+
+/* hide until hover or “.open” */
+.main-nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  z-index: 100;
+}
+.main-nav .has-submenu:hover > .submenu,
+.main-nav .has-submenu.open > .submenu {
+  display: block;
+}
+
+/* submenu links */
+.main-nav .submenu li a {
+  padding: .5rem 1rem;
+  display: block;
+  color: var(--text-main);
+}
+.main-nav .submenu li a:hover {
+  background: var(--soft-bg);
+}
+
+/* rotate arrow on open */
+.has-submenu.open .chevron {
+  transform: rotate(180deg);
+}
+
+/*──────────────────────────────────────────────
+  SECTION CARDS & HEADINGS
+──────────────────────────────────────────────*/
+/* “Card” container for many sections */
+.box-container {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* blue section titles */
+.section-title--blue {
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+/*──────────────────────────────────────────────
+  TRUST FEATURES GRID
+──────────────────────────────────────────────*/
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* individual trust cards */
+.trust-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+}
+.trust-card svg {
+  color: var(--accent-blue);
+  margin-bottom: .75rem;
+  width: 2rem;
+  height: 2rem;
+}
+.trust-card strong {
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+}
+.trust-card p {
+  margin: 0;
+  color: var(--text-light);
+  flex-grow: 1;
+}
+
+/*──────────────────────────────────────────────
+  QUICK NAV / “JUMP TO”
+──────────────────────────────────────────────*/
+.jump-to {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.jump-to .toc-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jump-to .toc-list li {
+  display: inline-block;
+  margin: 0 .75rem;
+}
+.jump-to .toc-list li a {
+  color: var(--accent-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.jump-to .toc-list li a:hover {
+  text-decoration: underline;
+}
+
+/*──────────────────────────────────────────────
+  PROCESS TIMELINE STYLE ADJUSTMENT
+──────────────────────────────────────────────*/
+/* ensure your timeline card uses the same .box-container */
+.process-timeline > .box-container {
+  padding: 2rem 1rem;
+}
