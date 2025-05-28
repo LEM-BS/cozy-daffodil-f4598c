@@ -560,3 +560,46 @@ form button:hover, .quote-form button:hover {
   color: #555;
   flex-grow: 1; /* push CTA (if any) down */
 }
+
+/* Utility: blue section title */
+.section-title--blue {
+  color: var(--primary);       /* whatever your “blue” variable is */
+  margin-bottom: 1rem;
+}
+
+/* Make box-container look like your timeline card */
+.box-container {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Trust-features grid (already in place) */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+/* Centre the jump-to links */
+.jump-to {
+  text-align: center;
+}
+.jump-to .toc-list {
+  display: inline-block;     /* so the UL itself is centred */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jump-to .toc-list li {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+/* Adjust section-title bottoms for balance */
+.trust-features .section-title--blue,
+.process-timeline .section-title--blue {
+  margin-bottom: 1.5rem;
+}
