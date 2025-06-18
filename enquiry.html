@@ -139,72 +139,81 @@ document.addEventListener('DOMContentLoaded', () => {
   <section class="enquiry-page">
   <div class="box-container" style="max-width:600px;margin:0 auto;">
     <h1>Request a Property Survey Quote</h1>
-    <p style="margin-bottom:1rem;">Get fast, honest advice and a no-obligation quote from Liam — your local AssocRICS-qualified building surveyor.</p>
-    <p style="margin-bottom:2rem;">We serve <strong>Deeside, Chester, Wrexham, Flintshire & nearby</strong>.</p>
+<p style="margin-bottom:1rem;">
+  Get fast, honest advice and a no-obligation quote from Liam — your local AssocRICS-qualified building surveyor.
+</p>
+<p style="margin-bottom:2rem;">
+  We serve <strong>Deeside, Chester, Wrexham, Flintshire & nearby</strong>.
+</p>
 
-    <form class="quote-form"
-          action="https://formspree.io/f/xzzdqqqz"
-          method="POST"
-          style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
-      
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+<form class="quote-form"
+      action="https://formspree.io/f/xzzdqqqz"
+      method="POST"
+      style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
 
-      <div style="display:grid;gap:1rem;">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
+  <!-- Honeypot field for spam protection -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
+  <!-- Redirect to custom thank-you page -->
+  <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required />
+  <div style="display:grid;gap:1rem;">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required />
 
-        <label for="address">Property Address:</label>
-        <input type="text" id="address" name="address" placeholder="e.g. 123 High Street, Chester" required />
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="e.g. jane@email.com" required />
 
-        <label for="postcode">Postcode:</label>
-        <input type="text" id="postcode" name="postcode" placeholder="e.g. CH1 2AA" required />
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="e.g. 07378 732037" required />
 
-        <label for="contact-method">Preferred Contact Method:</label>
-        <select id="contact-method" name="contact-method" required>
-          <option value="">-- Please Select --</option>
-          <option value="email">Email</option>
-          <option value="phone-call">Phone Call</option>
-          <option value="text-message">SMS / Text Message</option>
-          <option value="whatsapp">WhatsApp</option>
-          <option value="no-preference">No Preference</option>
-        </select>
+    <label for="address">Property Address:</label>
+    <input type="text" id="address" name="address" placeholder="e.g. 123 High Street, Chester" required />
 
-        <label for="survey-type">Survey Type:</label>
-        <select id="survey-type" name="survey-type" required>
-          <option value="">-- Please Select --</option>
-          <option value="level-1">RICS Level 1 Home Survey</option>
-          <option value="level-2">RICS Level 2 Home Survey</option>
-          <option value="level-3">RICS Level 3 Home Survey</option>
-          <option value="damp">Damp &amp; Timber Report</option>
-          <option value="epc">EPC with Floorplan</option>
-          <option value="measured">Measured Survey &amp; Floorplan</option>
-          <option value="ventilation">Ventilation Assessment</option>
-          <option value="unsure">Unsure – Please advise</option>
-        </select>
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" name="postcode" placeholder="e.g. CH1 2AA" required />
 
-        <label for="bedrooms">No. of Bedrooms:</label>
-        <input type="text" id="bedrooms" name="bedrooms" placeholder="e.g. 3" />
+    <label for="contact-method">Preferred Contact Method:</label>
+    <select id="contact-method" name="contact-method" required>
+      <option value="">-- Please Select --</option>
+      <option value="email">Email</option>
+      <option value="phone-call">Phone Call</option>
+      <option value="text-message">SMS / Text Message</option>
+      <option value="whatsapp">WhatsApp</option>
+      <option value="no-preference">No Preference</option>
+    </select>
 
-        <label for="details">Additional Notes:</label>
-        <textarea id="details" name="details" rows="4" placeholder="Any known issues, timescales or questions?"></textarea>
+    <label for="survey-type">Survey Type:</label>
+    <select id="survey-type" name="survey-type" required>
+      <option value="">-- Please Select --</option>
+      <option value="level-1">RICS Level 1 Home Survey</option>
+      <option value="level-2">RICS Level 2 Home Survey</option>
+      <option value="level-3">RICS Level 3 Home Survey</option>
+      <option value="damp">Damp &amp; Timber Report</option>
+      <option value="epc">EPC with Floorplan</option>
+      <option value="measured">Measured Survey &amp; Floorplan</option>
+      <option value="ventilation">Ventilation Assessment</option>
+      <option value="unsure">Unsure – Please advise</option>
+    </select>
 
-        <button type="submit" class="cta-button" style="margin-top:1rem;width:100%;">Get My Quote</button>
-      </div>
+    <label for="bedrooms">No. of Bedrooms:</label>
+    <input type="text" id="bedrooms" name="bedrooms" placeholder="e.g. 3" />
 
-      <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
-        <li><strong>No obligation:</strong> Get a quick response with honest advice</li>
-        <li><strong>Local service:</strong> Covering Deeside, Chester, Wrexham & surrounding</li>
-        <li><strong>Qualified:</strong> AssocRICS surveyor with years of experience</li>
-        <li><strong>Private and secure:</strong> Your details are never shared</li>
-      </ul>
-    </form>
+    <label for="details">Additional Notes:</label>
+    <textarea id="details" name="details" rows="4" placeholder="Any known issues, timescales or questions?"></textarea>
+
+    <button type="submit" class="cta-button" style="margin-top:1rem;width:100%;">
+      Get My Quote
+    </button>
+  </div>
+
+  <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
+    <li><strong>No obligation:</strong> Get a quick response with honest advice</li>
+    <li><strong>Local service:</strong> Covering Deeside, Chester, Wrexham & surrounding</li>
+    <li><strong>Qualified:</strong> AssocRICS surveyor with years of experience</li>
+    <li><strong>Private and secure:</strong> Your details are never shared</li>
+  </ul>
+</form>
     <p class="fine-print" style="margin-top:1rem;">
   Unsure which survey is right? <a href="/comparison.html">See what each survey includes</a> or <a href="/contact.html">ask for advice</a>.
 </p>h

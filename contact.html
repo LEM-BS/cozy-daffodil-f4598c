@@ -71,29 +71,34 @@
 
     <h2>Quick Contact Form</h2>
     <form class="quote-form"
-          action="https://formspree.io/f/xzzdqqqz"
-          method="POST"
-          style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-top:1rem;">
+      action="https://formspree.io/f/xzzdqqqz"
+      method="POST"
+      style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-top:1rem;">
 
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+  <!-- Anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
 
-      <div style="display:grid;gap:1rem;">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
+  <!-- Redirect -->
+  <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
+  <div style="display:grid;gap:1rem;">
 
-        <label for="message">Message / Enquiry:</label>
-        <textarea id="message" name="details" rows="4" placeholder="How can I help you?" required></textarea>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required />
 
-        <button type="submit" class="cta-button">Submit Enquiry</button>
-<p style="font-size:0.9rem;color:#4b5563;margin-top:0.5rem;">
-  ✔ Fast, no-obligation responses — no spam, ever
-</p>
-      </div>
-    </form>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" placeholder="e.g. jane@email.com" required />
+
+    <label for="details">Message / Enquiry:</label>
+    <textarea id="details" name="details" rows="4" placeholder="How can I help you?" required></textarea>
+
+    <button type="submit" class="cta-button">Submit Enquiry</button>
+
+    <p style="font-size:0.9rem;color:#4b5563;margin-top:0.5rem;">
+      ✔ Fast, no-obligation responses — no spam, ever
+    </p>
+  </div>
+</form>
     
     <p class="fine-print" style="margin-top:1rem;">
   Not sure which survey you need?

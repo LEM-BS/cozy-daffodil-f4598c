@@ -5,59 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | LEM Building Surveying Ltd</title>
   <meta name="description" content="Thank you for your enquiry. We will get back to you soon." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" />
 
-  <!-- Prevent this page from being indexed -->
-<meta name="robots" content="noindex, nofollow" />
-<link rel="stylesheet" href="/styles.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+QSDCUqzlgfO2z3lBU9rxO9xWJ6gU5AFVOIGuKz6ZlnbqybwVu6vZP4ylDkKUTnSR5Fctj/6aydcZ4IB3BQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- Global site tag (gtag.js) - Google Analytics/Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GXH0EY936M');
-</script>
+  <!-- Google Analytics + Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GXH0EY936M');
+    gtag('config', 'AW-17055358915'); // Replace with your working Google Ads ID
+    gtag('event','conversion',{ send_to:'AW-17055358915/AbCdEFgHiJk' }); // Replace conversion ID
+  </script>
+</head>
+<body>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17055358915"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17055358915');
-</script>
-	
-  <!-- Shared Header -->
+  <!-- HEADER -->
   <div id="header-include"></div>
 
   <!-- THANK YOU SECTION -->
   <section class="thank-you">
     <div class="box-container" style="text-align:center; padding:2rem;">
-      <h2>Thank You!</h2>
+      <h1>Thank You!</h1>
       <p>Your enquiry has been successfully submitted. We will get back to you shortly.</p>
       <div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="/rics-home-surveys" class="cta-button">See Survey Levels</a>
+        <a href="/rics-home-surveys.html" class="cta-button">See Survey Levels</a>
         <a href="/index.html" class="secondary-button">Return Home</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  <footer style="text-align:center; padding:1.5rem 0; font-size:0.9rem; color:#6b7280;">
+    &copy; 2025 LEM Building Surveying Ltd. All rights reserved.
   </footer>
 
-  <!-- Google Ads conversion event (replace IDs) -->
-  <script>
-    /* If the global gtag.js is already loaded site‑wide you only need this event call */
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('event','conversion',{ send_to:'AW-XXXXXXXXXX/AbCdEFgHiJk' });
-  </script>
-
-  <!-- JavaScript to inject header.html -->
+  <!-- Inject Header -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       fetch('/header.html')
@@ -66,5 +56,6 @@
         .catch(err => console.error('Header include failed:', err));
     });
   </script>
+
 </body>
 </html>
