@@ -41,15 +41,62 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <body>
-  <!-- Shared Header -->
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+    <!-- ░░ HEADER ░░ -->
+<header>
+    <div class="header-inner">
+      <div class="branding">
+        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
+          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
+          <span class="site-name">LEM Building Surveying Ltd.</span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
+          
+          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LEM Building Surveying Ltd",
+  "image": "https://www.lembuildingsurveying.co.uk/logo-sticker.png",
+  "url": "https://www.lembuildingsurveying.co.uk",
+  "telephone": "+447378732037",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Connah’s Quay",
+    "addressRegion": "Flintshire",
+    "postalCode": "CH5",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.2242,
+    "longitude": -3.0722
+  },
+  "openingHours": "Mo-Fr 09:00-17:30",
+  "priceRange": "££",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.2,
+      "longitude": -3.05
+    },
+    "geoRadius": "25000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/LEMSurveying",
+    "https://www.linkedin.com/company/lem-building-surveying"
+  ]
+}
 </script>
-  <meta name="description"
-        content="LEM Building Surveying Ltd. – Professional property surveys across North Wales, Chester, and the North West." />
-<head>
+  </header>
 	
   <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -115,14 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <!-- ENQUIRY PAGE -->
   <section class="enquiry-page">
-    <div class="box-container">
-      <h1>Request a Property Survey</h1>
-      <p>Complete the form below and Liam will be in touch to confirm details or provide a tailored quote—no obligation.</p>
+  <div class="box-container" style="max-width:600px;margin:0 auto;">
+    <h1>Request a Property Survey Quote</h1>
+    <p style="margin-bottom:1rem;">Get fast, honest advice and a no-obligation quote from Liam — your local AssocRICS-qualified building surveyor.</p>
+    <p style="margin-bottom:2rem;">We serve <strong>Deeside, Chester, Wrexham, Flintshire & nearby</strong>.</p>
 
-      <!-- Formspree: _next ensures redirect after successful send -->
-      <form action="https://formspree.io/f/xzzdqqqz" method="POST" class="enquiry-form">
-        <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+    <form class="quote-form"
+          action="https://formspree.io/f/xzzdqqqz"
+          method="POST"
+          style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
+      
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
 
+      <div style="display:grid;gap:1rem;">
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -131,16 +184,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" required />
-        
+
+        <label for="address">Property Address:</label>
+        <input type="text" id="address" name="address" placeholder="e.g. 123 High Street, Chester" required />
+
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" placeholder="e.g. CH1 2AA" required />
+
         <label for="contact-method">Preferred Contact Method:</label>
-         <select id="contact-method" name="contact-method" required>
-           <option value="">-- Please Select --</option>
-           <option value="email">Email</option>
-           <option value="phone-call">Phone Call</option>
-           <option value="text-message">SMS / Text Message</option>
-           <option value="whatsapp">WhatsApp</option>
+        <select id="contact-method" name="contact-method" required>
+          <option value="">-- Please Select --</option>
+          <option value="email">Email</option>
+          <option value="phone-call">Phone Call</option>
+          <option value="text-message">SMS / Text Message</option>
+          <option value="whatsapp">WhatsApp</option>
           <option value="no-preference">No Preference</option>
-         </select>
+        </select>
 
         <label for="survey-type">Survey Type:</label>
         <select id="survey-type" name="survey-type" required>
@@ -155,21 +214,27 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="unsure">Unsure – Please advise</option>
         </select>
 
-        <label for="address">Property Address:</label>
-        <input type="text" id="address" name="address" placeholder="123 High Street, Flintshire" />
-
-        <label for="bedrooms">Number of Bedrooms:</label>
-        <input type="number" id="bedrooms" name="bedrooms" min="0" placeholder="e.g. 3" />
+        <label for="bedrooms">No. of Bedrooms:</label>
+        <input type="text" id="bedrooms" name="bedrooms" placeholder="e.g. 3" />
 
         <label for="details">Additional Notes:</label>
-        <textarea id="details" name="details" rows="4" placeholder="Any known issues, preferred times, or questions."></textarea>
+        <textarea id="details" name="details" rows="4" placeholder="Any known issues, timescales or questions?"></textarea>
 
-        <button type="submit" class="cta-button">Submit Enquiry</button>
-      </form>
+        <button type="submit" class="cta-button" style="margin-top:1rem;width:100%;">Get My Quote</button>
+      </div>
 
-      <p class="thank-you-note">Thank you—we’ll be in touch shortly to help with your survey needs.</p>
-    </div>
-  </section>
+      <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
+        <li><strong>No obligation:</strong> Get a quick response with honest advice</li>
+        <li><strong>Local service:</strong> Covering Deeside, Chester, Wrexham & surrounding</li>
+        <li><strong>Qualified:</strong> AssocRICS surveyor with years of experience</li>
+        <li><strong>Private and secure:</strong> Your details are never shared</li>
+      </ul>
+    </form>
+    <p class="fine-print" style="margin-top:1rem;">
+  Unsure which survey is right? <a href="/comparison.html">See what each survey includes</a> or <a href="/contact.html">ask for advice</a>.
+</p>h
+  </div>
+</section>
 
   <!-- Shared Footer -->
   <div id="footer-include"></div>

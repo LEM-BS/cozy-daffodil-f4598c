@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact LEM Building Surveying Ltd | Phone & Email</title>
-
-  <meta name="description"
-        content="Call or email LEM Building Surveying Ltd for independent property survey advice across Deeside, Chester & the North West." />
-  <meta name="keywords"
-        content="building surveyor contact, surveyor phone Deeside, property survey email Chester" />
+  <title>Contact Your Local Building Surveyor | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Speak directly with Liam, your local AssocRICS surveyor. Get fast advice or request a quote for property surveys in Chester, Deeside, Mold & surrounding areas." />
+  <meta name="keywords" content="contact building surveyor, property survey Chester, surveyor Deeside, RICS survey Flintshire" />
 
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,30 +18,93 @@
     gtag('js', new Date());
     gtag('config', 'G-GXH0EY936M');
   </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+  <!-- ░░ HEADER ░░ -->
+<header>
+    <div class="header-inner">
+      <div class="branding">
+        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
+          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
+          <span class="site-name">LEM Building Surveying Ltd.</span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
+          
+          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 <body>
-  <!-- Shared header -->
-  <div id="header-include"></div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-container">
       <h1>Get in Touch</h1>
       <p class="hero-subtitle">Fast answers from a local, independent surveyor</p>
+      <p class="fine-print" style="margin-top:1rem;">
+  Not sure which survey you need? <a href="/comparison.html">Compare your options here</a>.
+</p>
     </div>
   </section>
 
   <!-- CONTACT CARD -->
   <main id="main" class="contact-card">
-    <div class="box-container">
+  <div class="box-container" style="max-width:600px;margin:0 auto;">
+    <p style="margin-bottom:2rem;">
+      Need advice or a tailored quote? You can call or email directly, or use the quick contact form below for a fast response.
+    </p>
+
+    <div style="margin-bottom:2rem;">
       <p><strong>Phone:</strong> <a href="tel:07378732037">07378&nbsp;732&nbsp;037</a></p>
-      <p><strong>Email:</strong> <a href="mailto:enquiries@lembuildingsurveying.co.uk">
-        enquiries@lembuildingsurveying.co.uk</a></p>
-      <p>If you need a tailored quote, please use our
-        <a href="/enquiry.html" class="inline-link">quick enquiry form</a> for the fastest response.</p>
+      <p><strong>Email:</strong> <a href="mailto:enquiries@lembuildingsurveying.co.uk">enquiries@lembuildingsurveying.co.uk</a></p>
       <p class="fine-print">Office hours: Mon–Fri 8:30 am – 5:30 pm</p>
     </div>
-  </main>
+
+    <h2>Quick Contact Form</h2>
+    <form class="quote-form"
+          action="https://formspree.io/f/xzzdqqqz"
+          method="POST"
+          style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-top:1rem;">
+
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+
+      <div style="display:grid;gap:1rem;">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message / Enquiry:</label>
+        <textarea id="message" name="details" rows="4" placeholder="How can I help you?" required></textarea>
+
+        <button type="submit" class="cta-button">Submit Enquiry</button>
+<p style="font-size:0.9rem;color:#4b5563;margin-top:0.5rem;">
+  ✔ Fast, no-obligation responses — no spam, ever
+</p>
+      </div>
+    </form>
+    
+    <p class="fine-print" style="margin-top:1rem;">
+  Not sure which survey you need?
+  <a href="/comparison.html">Compare survey types →</a>
+</p>
+
+    <p style="margin-top:2rem;">
+      Want a detailed quote instead? Use the <a href="/enquiry.html" class="inline-link">survey quote form →</a>
+    </p>
+  </div>
+</main>
 
   <!-- CTA -->
   <section class="contact-cta">
@@ -77,5 +137,32 @@
       });
     });
   </script>
+  <a href="https://wa.me/447378732037" target="_blank"
+   style="position:fixed;bottom:80px;right:20px;background:#25D366;padding:12px 16px;border-radius:50%;color:white;font-size:1.4rem;text-align:center;z-index:999;">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i><span class="sr-only">Message us on WhatsApp</span>
+</a>
+<!-- Schema for Contact Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact LEM Building Surveying Ltd",
+  "description": "Contact page for LEM Building Surveying Ltd, offering property surveys in Deeside, Chester and the North West.",
+  "url": "https://www.lembuildingsurveying.co.uk/contact.html",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "LEM Building Surveying Ltd",
+    "url": "https://www.lembuildingsurveying.co.uk",
+    "telephone": "+447378732037",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Connah’s Quay",
+      "addressRegion": "Flintshire",
+      "postalCode": "CH5",
+      "addressCountry": "GB"
+    }
+  }
+}
+</script>
 </body>
 </html>
