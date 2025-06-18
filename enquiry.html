@@ -6,13 +6,31 @@
   <title>Request a Property Survey | Get a Quote | LEM Building Surveying Ltd</title>
   <meta name="description" content="Submit your property details to request a free, no-obligation quote for a building survey, damp report, EPC, or floorplan. Serving Deeside, Chester & the North West." />
   <meta name="keywords" content="Request Building Survey Quote, Property Survey Form, RICS Survey Enquiry, Damp Survey Quote, Floorplan Survey Deeside Chester North West" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/styles.css" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Font Awesome (fixed link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+QSDCUqzlgfO2z3lBU9rxO9xWJ6gU5AFVOIGuKz6ZlnbqybwVu6vZP4ylDkKUTnSR5Fctj/6aydcZ4IB3BQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CTA Colour Overrides -->
+  <style>
+    .main-nav a.cta {
+      background-color: var(--sage-grey) !important;
+      color: var(--text-dark) !important;
+    }
+    .main-nav a.cta:hover {
+      background-color: var(--light-grey) !important;
+    }
+  </style>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-GXH0EY936M');
   </script>
@@ -127,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <title>LEM Building Surveying Ltd.</title>
 </head>
 <body>
-	
+	  
   <!-- ENQUIRY PAGE -->
   <section class="enquiry-page">
   <div class="box-container" style="max-width:600px;margin:0 auto;">
