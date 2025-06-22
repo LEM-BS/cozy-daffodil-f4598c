@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Building Surveyor in Holywell | RICS Home Surveys | LEM Building Surveying Ltd</title>
+  <meta name="description" content="Independent building surveyor covering Holywell. RICS Level 1, 2 & 3 Home Surveys, Damp Reports, and expert advice from a qualified local professional." />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- LocalBusiness Schema for Holywell -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LEM Building Surveying Ltd",
+    "url": "https://www.lembuildingsurveying.co.uk/holywell.html",
+    "telephone": "+447378732037",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Holywell",
+      "addressRegion": "Flintshire",
+      "postalCode": "CH8",
+      "addressCountry": "GB"
+    },
+    "areaServed": "Holywell, Flintshire",
+    "description": "Qualified building surveyor offering RICS Home Surveys and Damp Reports in Holywell, Flintshire.",
+    "image": "https://www.lembuildingsurveying.co.uk/logo-sticker.png"
+  }
+  </script>
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Building Surveyor in Holywell</h1>
+      <p>Independent RICS surveys and damp reports for Holywell homeowners, buyers, landlords and sellers. Clear, honest, and local.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT SECTION -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Your Local Surveyor for Holywell</h2>
+      <p>Based near Connah’s Quay, I carry out surveys across Holywell and surrounding areas. Whether you’re buying your next home or investigating a damp problem, I’ll provide a straightforward, qualified inspection—backed by local insight and RICS standards.</p>
+
+      <h2>RICS Surveying Services Available in Holywell</h2>
+      <ul>
+        <li><strong>RICS Level 1 Survey:</strong> A clear condition report suited to modern or well-maintained homes—ideal for peace of mind.</li>
+        <li><strong>RICS Level 2 Survey (HomeBuyer Report):</strong> Mid-level advice including defects, repairs, and maintenance considerations.</li>
+        <li><strong>RICS Level 3 Survey (Building Survey):</strong> Full structural survey for older or altered homes—includes cause, consequence and repair advice.</li>
+        <li><strong>Damp & Timber Reports:</strong> Investigation of damp, mould or timber decay with actionable recommendations.</li>
+        <li><strong>Floorplans & Measured Surveys:</strong> Accurate scaled drawings for extensions, layouts or documentation.</li>
+        <li><strong>EPCs & Floorplans:</strong> Combined Energy Performance Certificate and plan—ideal for marketing or letting.</li>
+      </ul>
+
+      <p><a href="/services.html">View all services offered →</a></p>
+
+      <h2>Why Choose LEM Building Surveying?</h2>
+      <ul>
+        <li><strong>Qualified & Independent:</strong> AssocRICS surveyor with no sales agenda.</li>
+        <li><strong>Local Knowledge:</strong> Familiar with Holywell’s mix of stone-built, terraced, and modern homes.</li>
+        <li><strong>Fast Turnaround:</strong> Most reports within 3–5 working days, depending on survey type.</li>
+        <li><strong>Clear Reporting:</strong> No jargon—just honest, professional guidance you can use.</li>
+      </ul>
+
+      <h2>Book a Survey in Holywell</h2>
+      <p>If you need a home survey, damp report or general advice, I’d be happy to help. Call <a href="tel:07378732037">07378 732037</a> or <a href="/enquiry.html">submit your details online</a> for a no-obligation quote.</p>
+
+      <a href="/enquiry.html" class="cta-button">Get a Survey Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header/Footer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('header-include').innerHTML = html)
+        .catch(err => console.error('Header load failed:', err));
+
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html)
+        .catch(err => console.error('Footer load failed:', err));
+    });
+  </script>
+</body>
+</html>

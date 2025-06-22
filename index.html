@@ -49,43 +49,6 @@
         </ul>
       </nav>
     </div>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "LEM Building Surveying Ltd",
-  "image": "https://www.lembuildingsurveying.co.uk/logo-sticker.png",
-  "url": "https://www.lembuildingsurveying.co.uk",
-  "telephone": "+447378732037",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Connah’s Quay",
-    "addressRegion": "Flintshire",
-    "postalCode": "CH5",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 53.2242,
-    "longitude": -3.0722
-  },
-  "openingHours": "Mo-Fr 09:00-17:30",
-  "priceRange": "££",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 53.2,
-      "longitude": -3.05
-    },
-    "geoRadius": "25000"
-  },
-  "sameAs": [
-    "https://www.facebook.com/LEMSurveying",
-    "https://www.linkedin.com/company/lem-building-surveying"
-  ]
-}
-</script>
   </header>
 
 <!-- ░░ HERO + QUOTE FORM ░░ -->
@@ -95,69 +58,33 @@
       <span style="color:#FFB300;font-size:1.5rem;">★★★★★</span>
       <span style="margin-left:.5rem;color:#233038;">Rated 5 on Google & Direct Reviews</span>
     </div>
+    <h1 style="text-align:center;margin-bottom:.5rem;">Book Your RICS Home Survey — Fast, Clear &amp; Local</h1>
+    <p style="text-align:center;margin-bottom:1.5rem;">Make confident property decisions with a qualified surveyor’s report — turnaround in as little as 5–7&nbsp;days. Get your tailored quote now and secure your survey date.</p>
 
-    <h1 style="text-align:center;margin-bottom:.5rem;">RICS Home Surveys in Chester, Deeside, Wrexham & NW</h1>
-    <p style="text-align:center;margin-bottom:1.5rem;">
-      Independent, qualified and trusted — get clear, fast reports direct from Liam, an AssocRICS surveyor with local experience. 
-      <a href="/comparison.html" class="inline-link">Compare survey types →</a>
-    </p>
-
-    <h2 style="text-align:center;margin-bottom:1rem;">Get Your RICS Home Survey Quote</h2>
-<p style="text-align:center;margin-bottom:2rem;">
-  Complete the quick form below for a fast, no-obligation quote direct from Liam — your local AssocRICS surveyor.
-</p>
-
-<form class="quote-form"
-      action="https://formspree.io/f/xzzdqqqz"
-      method="POST"
-      style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
-
-  <!-- Anti-spam honeypot -->
-  <input type="text" name="_gotcha" style="display:none" />
-
-  <!-- Thank-you redirect -->
-  <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
-
-  <div style="display:grid;gap:1rem;">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required />
-
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" placeholder="e.g. jane@email.com" required />
-
-    <label for="contact">Contact Number:</label>
-    <input type="text" id="contact" name="contact" placeholder="e.g. 07378 732037" required />
-
-    <label for="address">Property Address:</label>
-    <input type="text" id="address" name="address" placeholder="e.g. 123 High Street, Chester" required />
-
-    <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" name="postcode" placeholder="e.g. CH1 2AA" required />
-
-    <label for="survey-type">Survey Type:</label>
-    <select id="survey-type" name="survey-type" required>
-      <option value="">-- Please Select --</option>
-      <option value="level-1">Level 1 — Condition Report</option>
-      <option value="level-2">Level 2 — HomeBuyer Survey</option>
-      <option value="level-3">Level 3 — Building Survey</option>
-      <option value="unsure">Unsure — Please advise</option>
-    </select>
-
-    <label for="bedrooms">Number of Bedrooms:</label>
-    <input type="text" id="bedrooms" name="bedrooms" placeholder="e.g. 3" required />
-
-    <button type="submit" class="cta-button hero-contrast" style="margin-top:1rem;width:100%;">
-      Get My Quote in 60 Minutes
-    </button>
-  </div>
-
-  <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
-    <li><strong>No spam or pushy sales</strong> — you deal directly with Liam</li>
-    <li><strong>Fast responses, even evenings</strong> where possible</li>
-    <li><strong>Fully qualified</strong> AssocRICS surveyor, not a call centre</li>
-    <li>Serving <strong>Chester, Deeside, Mold, Buckley, Wrexham & nearby</strong></li>
-  </ul>
-</form>
+    <form class="quote-form" action="https://formspree.io/f/xzzdqqqz" method="POST" style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
+      <input type="hidden" name="_next" value="/thank-you.html"/>
+      <div style="display:grid;gap:1rem;">
+        <input type="text" name="name"        placeholder="Your Name"       required/>
+        <input type="email" name="email"      placeholder="Your Email"      required/>
+        <input type="text" name="contact"     placeholder="Contact Number"  required/>
+        <input type="text" name="postcode"    placeholder="Postcode"        required/>
+        <select name="survey-type" required>
+          <option value="">Survey Type</option>
+          <option value="level-1">Level 1 — Condition Report</option>
+          <option value="level-2">Level 2 — HomeBuyer Survey</option>
+          <option value="level-3">Level 3 — Building Survey</option>
+          <option value="unsure">Unsure</option>
+        </select>
+        <input type="text" name="bedrooms" placeholder="No. of Bedrooms" required/>
+        <button type="submit" class="cta-button hero-contrast" style="margin-top:1rem;width:100%;">Get My Survey Quote in 60 Minutes</button>
+      </div>
+      <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
+        <li><strong>Fast, no-obligation quote</strong> direct from a surveyor</li>
+        <li><strong>Out-of-hours responses</strong> whenever possible</li>
+        <li>100% privacy — your details are <strong>never shared</strong></li>
+        <li>Serving Connah’s Quay, Deeside, Chester, Mold, Buckley, Hawarden &amp; nearby</li>
+      </ul>
+    </form>
   </div>
 </section>
 
@@ -247,9 +174,6 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials" aria-labelledby="testimonials-title">
       <div class="box-container" id="testimonials-include"></div>
-      <p style="text-align:center;font-size:1rem;">
-  Or explore individual surveys: <a href="/level-1.html">Level 1</a>, <a href="/level-2.html">Level 2</a>, <a href="/level-3.html">Level 3</a>
-</p>
     </section>
     <script>
       document.addEventListener('DOMContentLoaded', () => {

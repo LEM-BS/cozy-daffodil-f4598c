@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Building Surveyor in Higher Kinnerton | LEM Building Surveying Ltd</title>
+  <meta name="description" content="RICS Level 1, 2 & 3 Home Surveys, damp inspections, and property advice in Higher Kinnerton. Local, independent and qualified." />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- LocalBusiness Schema for Higher Kinnerton -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LEM Building Surveying Ltd",
+    "url": "https://www.lembuildingsurveying.co.uk/higher-kinnerton.html",
+    "telephone": "+447378732037",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Higher Kinnerton",
+      "addressRegion": "Flintshire",
+      "postalCode": "CH4",
+      "addressCountry": "GB"
+    },
+    "areaServed": "Higher Kinnerton, Flintshire",
+    "description": "RICS Home Surveys, Building Surveys and Damp Reports in Higher Kinnerton. Local, qualified and independent.",
+    "image": "https://www.lembuildingsurveying.co.uk/logo-sticker.png"
+  }
+  </script>
+</head>
+<body>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Home & Building Surveys in Higher Kinnerton</h1>
+      <p>RICS-accredited surveys and damp reports for buyers, sellers, and owners in Higher Kinnerton — clear, fast and fully independent.</p>
+      <a href="/enquiry.html" class="cta-button">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="service-detail">
+    <div class="box-container">
+      <h2>Local Surveyor — Higher Kinnerton & Surrounding</h2>
+      <p>
+        I provide tailored property advice across Higher Kinnerton, whether you're buying a new-build on the outskirts or managing a long-held detached home near the border. You’ll receive practical guidance and detailed reporting from a trusted local professional.
+      </p>
+
+      <h2>Survey Options Available</h2>
+      <ul>
+        <li><strong>Level 1 Survey:</strong> A simple visual condition check for modern or well-maintained homes — ideal for peace of mind purchases.</li>
+        <li><strong>Level 2 Survey:</strong> The most popular Home Survey option — includes detailed condition reporting, advice on defects, and maintenance.</li>
+        <li><strong>Level 3 Survey:</strong> Comprehensive structural-level inspection — perfect for older, extended, or unusual properties.</li>
+        <li><strong>Damp & Timber Reports:</strong> Targeted diagnosis of rising damp, condensation or timber decay — clear and impartial advice.</li>
+        <li><strong>Measured Surveys & Floorplans:</strong> Accurate floorplans for home improvement, extensions or planning.</li>
+        <li><strong>EPCs with Floorplans:</strong> Required for sales or lettings — includes an Energy Performance Certificate with layout drawing.</li>
+      </ul>
+      <p><a href="/services.html">Explore all services →</a></p>
+
+      <h2>Why Choose LEM Building Surveying?</h2>
+      <ul>
+        <li><strong>AssocRICS Qualified:</strong> Surveys carried out personally by Liam, your local independent surveyor.</li>
+        <li><strong>Genuinely Local:</strong> Based nearby in Connah’s Quay and covering Higher Kinnerton regularly.</li>
+        <li><strong>No call centres:</strong> Just clear communication and expert advice — directly from your surveyor.</li>
+        <li><strong>Fast turnaround:</strong> Reports usually delivered in 3–5 working days.</li>
+      </ul>
+
+      <h2>Book or Enquire</h2>
+      <p>For a tailored quote or to ask a question, send your details through now and I’ll be in touch — usually within the hour.</p>
+      <a href="/enquiry.html" class="cta-button">Get a Fast Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-include"></div>
+
+  <!-- Load Header/Footer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('header-include').innerHTML = html)
+        .catch(err => console.error('Header include failed:', err));
+
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html)
+        .catch(err => console.error('Footer include failed:', err));
+    });
+  </script>
+</body>
+</html>

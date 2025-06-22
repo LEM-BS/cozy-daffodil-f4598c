@@ -6,31 +6,13 @@
   <title>Request a Property Survey | Get a Quote | LEM Building Surveying Ltd</title>
   <meta name="description" content="Submit your property details to request a free, no-obligation quote for a building survey, damp report, EPC, or floorplan. Serving Deeside, Chester & the North West." />
   <meta name="keywords" content="Request Building Survey Quote, Property Survey Form, RICS Survey Enquiry, Damp Survey Quote, Floorplan Survey Deeside Chester North West" />
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/styles.css" />
 
-  <!-- Font Awesome (fixed link) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-RXf+QSDCUqzlgfO2z3lBU9rxO9xWJ6gU5AFVOIGuKz6ZlnbqybwVu6vZP4ylDkKUTnSR5Fctj/6aydcZ4IB3BQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- CTA Colour Overrides -->
-  <style>
-    .main-nav a.cta {
-      background-color: var(--sage-grey) !important;
-      color: var(--text-dark) !important;
-    }
-    .main-nav a.cta:hover {
-      background-color: var(--light-grey) !important;
-    }
-  </style>
-
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GXH0EY936M');
   </script>
@@ -59,8 +41,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <body>
-    <!-- ░░ HEADER ░░ -->
-<header>
+  <!-- Shared Header -->
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+</script>
+  <meta name="description"
+        content="LEM Building Surveying Ltd. – Professional property surveys across North Wales, Chester, and the North West." />
+<head>
+	
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- CTA colour override for header only -->
+  <style>
+    /* Use your “sage” for buttons on charcoal (header) */
+    .main-nav a.cta {
+      background-color: var(--sage-grey) !important;
+      color:       var(--text-dark) !important;
+    }
+    .main-nav a.cta:hover {
+      background-color: var(--light-grey) !important;
+    }
+  </style>
+</head>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-RXf+QSDCUqzlgfO2z3lBU9rxO9xWJ6gU5AFVOIGuKz6ZlnbqybwVu6vZP4ylDkKUTnSR5Fctj/6aydcZ4IB3BQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <title>LEM Building Surveying Ltd.</title>
+</head>
+<body>
+
+  <header>
     <div class="header-inner">
       <div class="branding">
         <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
@@ -77,148 +99,77 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       </nav>
     </div>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "LEM Building Surveying Ltd",
-  "image": "https://www.lembuildingsurveying.co.uk/logo-sticker.png",
-  "url": "https://www.lembuildingsurveying.co.uk",
-  "telephone": "+447378732037",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Connah’s Quay",
-    "addressRegion": "Flintshire",
-    "postalCode": "CH5",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 53.2242,
-    "longitude": -3.0722
-  },
-  "openingHours": "Mo-Fr 09:00-17:30",
-  "priceRange": "££",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 53.2,
-      "longitude": -3.05
-    },
-    "geoRadius": "25000"
-  },
-  "sameAs": [
-    "https://www.facebook.com/LEMSurveying",
-    "https://www.linkedin.com/company/lem-building-surveying"
-  ]
-}
-</script>
   </header>
-	
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('header-include').innerHTML = html)
+        .catch(err => console.error('Header load failed:', err));
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html)
+        .catch(err => console.error('Footer load failed:', err));
+    });
+  </script>
 
-  <!-- CTA colour override for header only -->
-  <style>
-    /* Use your “sage” for buttons on charcoal (header) */
-    .main-nav a.cta {
-      background-color: var(--sage-grey) !important;
-      color:       var(--text-dark) !important;
-    }
-    .main-nav a.cta:hover {
-      background-color: var(--light-grey) !important;
-    }
-  </style>
-
-  <title>LEM Building Surveying Ltd.</title>
-</head>
-<body>
-	  
   <!-- ENQUIRY PAGE -->
   <section class="enquiry-page">
-  <div class="box-container" style="max-width:600px;margin:0 auto;">
-    <h1>Request a Property Survey Quote</h1>
-<p style="margin-bottom:1rem;">
-  Get fast, honest advice and a no-obligation quote from Liam — your local AssocRICS-qualified building surveyor.
-</p>
-<p style="margin-bottom:2rem;">
-  We serve <strong>Deeside, Chester, Wrexham, Flintshire & nearby</strong>.
-</p>
+    <div class="box-container">
+      <h1>Request a Property Survey</h1>
+      <p>Complete the form below and Liam will be in touch to confirm details or provide a tailored quote—no obligation.</p>
 
-<form class="quote-form"
-      action="https://formspree.io/f/xzzdqqqz"
-      method="POST"
-      style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
+      <!-- Formspree: _next ensures redirect after successful send -->
+      <form action="https://formspree.io/f/xzzdqqqz" method="POST" class="enquiry-form">
+        <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
 
-  <!-- Honeypot field for spam protection -->
-  <input type="text" name="_gotcha" style="display:none" />
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
 
-  <!-- Redirect to custom thank-you page -->
-  <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
 
-  <div style="display:grid;gap:1rem;">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        
+        <label for="contact-method">Preferred Contact Method:</label>
+         <select id="contact-method" name="contact-method" required>
+           <option value="">-- Please Select --</option>
+           <option value="email">Email</option>
+           <option value="phone-call">Phone Call</option>
+           <option value="text-message">SMS / Text Message</option>
+           <option value="whatsapp">WhatsApp</option>
+          <option value="no-preference">No Preference</option>
+         </select>
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" placeholder="e.g. jane@email.com" required />
+        <label for="survey-type">Survey Type:</label>
+        <select id="survey-type" name="survey-type" required>
+          <option value="">-- Please Select --</option>
+          <option value="level-1">RICS Level 1 Home Survey</option>
+          <option value="level-2">RICS Level 2 Home Survey</option>
+          <option value="level-3">RICS Level 3 Home Survey</option>
+          <option value="damp">Damp &amp; Timber Report</option>
+          <option value="epc">EPC with Floorplan</option>
+          <option value="measured">Measured Survey &amp; Floorplan</option>
+          <option value="ventilation">Ventilation Assessment</option>
+          <option value="unsure">Unsure – Please advise</option>
+        </select>
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" placeholder="e.g. 07378 732037" required />
+        <label for="address">Property Address:</label>
+        <input type="text" id="address" name="address" placeholder="123 High Street, Flintshire" />
 
-    <label for="address">Property Address:</label>
-    <input type="text" id="address" name="address" placeholder="e.g. 123 High Street, Chester" required />
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" min="0" placeholder="e.g. 3" />
 
-    <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" name="postcode" placeholder="e.g. CH1 2AA" required />
+        <label for="details">Additional Notes:</label>
+        <textarea id="details" name="details" rows="4" placeholder="Any known issues, preferred times, or questions."></textarea>
 
-    <label for="contact-method">Preferred Contact Method:</label>
-    <select id="contact-method" name="contact-method" required>
-      <option value="">-- Please Select --</option>
-      <option value="email">Email</option>
-      <option value="phone-call">Phone Call</option>
-      <option value="text-message">SMS / Text Message</option>
-      <option value="whatsapp">WhatsApp</option>
-      <option value="no-preference">No Preference</option>
-    </select>
+        <button type="submit" class="cta-button">Submit Enquiry</button>
+      </form>
 
-    <label for="survey-type">Survey Type:</label>
-    <select id="survey-type" name="survey-type" required>
-      <option value="">-- Please Select --</option>
-      <option value="level-1">RICS Level 1 Home Survey</option>
-      <option value="level-2">RICS Level 2 Home Survey</option>
-      <option value="level-3">RICS Level 3 Home Survey</option>
-      <option value="damp">Damp &amp; Timber Report</option>
-      <option value="epc">EPC with Floorplan</option>
-      <option value="measured">Measured Survey &amp; Floorplan</option>
-      <option value="ventilation">Ventilation Assessment</option>
-      <option value="unsure">Unsure – Please advise</option>
-    </select>
-
-    <label for="bedrooms">No. of Bedrooms:</label>
-    <input type="text" id="bedrooms" name="bedrooms" placeholder="e.g. 3" />
-
-    <label for="details">Additional Notes:</label>
-    <textarea id="details" name="details" rows="4" placeholder="Any known issues, timescales or questions?"></textarea>
-
-    <button type="submit" class="cta-button" style="margin-top:1rem;width:100%;">
-      Get My Quote
-    </button>
-  </div>
-
-  <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
-    <li><strong>No obligation:</strong> Get a quick response with honest advice</li>
-    <li><strong>Local service:</strong> Covering Deeside, Chester, Wrexham & surrounding</li>
-    <li><strong>Qualified:</strong> AssocRICS surveyor with years of experience</li>
-    <li><strong>Private and secure:</strong> Your details are never shared</li>
-  </ul>
-</form>
-    <p class="fine-print" style="margin-top:1rem;">
-  Unsure which survey is right? <a href="/comparison.html">See what each survey includes</a> or <a href="/contact.html">ask for advice</a>.
-</p>h
-  </div>
-</section>
+      <p class="thank-you-note">Thank you—we’ll be in touch shortly to help with your survey needs.</p>
+    </div>
+  </section>
 
   <!-- Shared Footer -->
   <div id="footer-include"></div>
