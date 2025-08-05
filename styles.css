@@ -2,14 +2,14 @@
   1. ROOT VARIABLES & BASE RESET
 ──────────────────────────────────────────────*/
 :root {
-  --primary-blue:   #22314A;   /* header/footer/nav - deep navy */
-  --accent-blue:    #1976D2;   /* action buttons/links */
-  --hover-blue:     #1565C0;   /* button hover, focus */
-  --soft-bg:        #F7F9FB;   /* page background */
-  --card-bg:        #fff;      /* cards and content blocks */
-  --divider-grey:   #E5EAF2;   /* borders/dividers */
-  --text-main:      #232F3E;   /* main text */
-  --text-light:     #516075;   /* secondary text */
+  --primary-blue:   #22314A;
+  --accent-blue:    #1976D2;
+  --hover-blue:     #1565C0;
+  --soft-bg:        #F7F9FB;
+  --card-bg:        #fff;
+  --divider-grey:   #E5EAF2;
+  --text-main:      #232F3E;
+  --text-light:     #516075;
   --border-radius:  10px;
   --shadow:         0 2px 12px rgba(34,49,74,0.07);
 }
@@ -22,23 +22,71 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   padding-bottom: 80px;
-  transition: background .3s, color .3s;
 }
-img, svg { max-width: 100%; }
 
 /*──────────────────────────────────────────────
   2. HEADER & NAVIGATION
 ──────────────────────────────────────────────*/
-nav, footer {
+.site-header {
   background: var(--primary-blue);
-  color: #fff;
+  color: white;
+  padding: 1rem 1.5rem;
 }
-nav a, footer a {
-  color: #fff !important;
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
 }
-nav a:hover {
-  color: var(--accent-blue) !important;
+.logo {
+  max-height: 80px;
+  width: auto;
+  display: block;
+}
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+/* Navigation Overrides */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.main-nav a:hover {
+  background: var(--hover-blue);
+}
+.main-nav a.cta {
+  background: var(--accent-blue);
+  color: white;
+}
+.main-nav a.cta:hover {
+  background: var(--hover-blue);
 }
 
 /*──────────────────────────────────────────────
@@ -51,20 +99,18 @@ nav a:hover {
   border-radius: 1rem;
 }
 .hero a.button {
-  background: var(--accent-blue);
+  background: #7a9e7e;
   color: white !important;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   display: inline-block;
   margin-top: 1rem;
+  font-weight: bold;
   text-decoration: none;
-}
-.hero a.button:hover {
-  background: var(--hover-blue);
 }
 
 /*──────────────────────────────────────────────
-  4. GRID & CARDS
+  4. CARD GRID & CONTENT
 ──────────────────────────────────────────────*/
 .grid-3 {
   display: grid;
@@ -73,11 +119,11 @@ nav a:hover {
   margin-top: 2rem;
 }
 .card {
-  background: var(--card-bg);
+  background: white;
   padding: 2rem;
   border-left: 6px solid #8fa58a;
   border-radius: 0.8rem;
-  box-shadow: var(--shadow);
+  box-shadow: 0 2px 10px rgba(90, 70, 40, 0.07);
 }
 
 /*──────────────────────────────────────────────
@@ -90,46 +136,86 @@ nav a:hover {
   text-align: center;
 }
 .cta a {
-  background: var(--accent-blue);
+  background: #7a9e7e;
   color: white !important;
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
   display: inline-block;
   margin-top: 1rem;
   text-decoration: none;
+  font-weight: bold;
 }
-.cta a:hover {
+
+/*──────────────────────────────────────────────
+  6. FOOTER
+──────────────────────────────────────────────*/
+.site-footer {
+  background: var(--primary-blue);
+  color: white;
+  font-size: 0.95rem;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.footer-col {
+  flex: 1 1 200px;
+}
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.footer-links a {
+  color: var(--divider-grey);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: white;
+}
+.footer-bottom {
   background: var(--hover-blue);
-}
-
-/*──────────────────────────────────────────────
-  6. TRUSTINDEX WIDGET
-──────────────────────────────────────────────*/
-.ti-widget {
-  margin-top: 1.5rem;
-}
-
-/*──────────────────────────────────────────────
-  7. FOOTER
-──────────────────────────────────────────────*/
-footer {
-  padding: 1.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
-}
-footer a:hover {
-  text-decoration: underline;
+  font-size: 0.85rem;
+  color: #ddd;
 }
 
 /*──────────────────────────────────────────────
-  8. RESPONSIVE
+  7. TESTIMONIAL SECTION (TrustIndex styling handled by their script)
+──────────────────────────────────────────────*/
+.section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.section ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+/*──────────────────────────────────────────────
+  8. MEDIA QUERIES
 ──────────────────────────────────────────────*/
 @media (max-width: 768px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
   }
-  .hero {
-    padding: 2rem 1rem;
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
   }
 }
