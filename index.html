@@ -5,75 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LEM Building Surveying Ltd. | Home</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="styles.css" />
   <script defer async src="https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7"></script>
-  <style>
-    body {
-      background-color: #f6f5ef;
-      color: #2b2b2b;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    nav, footer {
-      background: #d9ccb4;
-      color: #514538;
-    }
-    nav a, footer a {
-      color: #514538 !important;
-    }
-    .hero {
-      background: linear-gradient(100deg, #e2ddcc 65%, #d9ccb4 100%);
-      padding: 3rem 2rem;
-      text-align: center;
-      border-radius: 1rem;
-    }
-    .hero a.button {
-      background: #7a9e7e;
-      color: white !important;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 2rem;
-      border-left: 6px solid #8fa58a;
-      border-radius: 0.8rem;
-      box-shadow: 0 2px 10px rgba(90,70,40,.07);
-    }
-    .cta {
-      background: #e6e0d0;
-      padding: 2rem;
-      border-radius: 1rem;
-      text-align: center;
-    }
-    .cta a {
-      background: #7a9e7e;
-      color: white !important;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>LEM Building Surveying Ltd.</strong></li>
-    </ul>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/enquiry.html" role="button">Get a Quote</a></li>
-    </ul>
-  </nav>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="branding">
+        <a href="index.html" class="logo-link">
+          <img src="logo-sticker.png" alt="LEM Logo" class="logo" />
+          <div class="site-name">LEM Building Surveying Ltd.</div>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/index.html" aria-current="page">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <section class="hero">
@@ -111,10 +65,9 @@
     </section>
 
     <section class="section">
-  <h2>Client Testimonials</h2>
-  <div class="ti-widget ti-goog"><!-- Trustindex widget will load here --></div>
-  <script defer async src="https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7"></script>
-</section>
+      <h2>Client Testimonials</h2>
+      <div class="ti-widget ti-goog"><!-- Trustindex widget will load here --></div>
+    </section>
 
     <section class="cta">
       <h2>Need Expert Advice or a Fast Quote?</h2>
@@ -123,12 +76,26 @@
     </section>
   </main>
 
-  <footer class="container-fluid">
-    <div class="container">
-      <small>
-        &copy; 2025 LEM Building Surveying Ltd. • <a href="/services.html">Services</a> • <a href="/enquiry.html">Contact</a>
-      </small>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h3>LEM Building Surveying Ltd.</h3>
+        <p>Independent RICS Home Surveyor covering North Wales, Cheshire, and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/enquiry.html">Get a Quote</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 LEM Building Surveying Ltd. | Designed with care.
     </div>
   </footer>
+
 </body>
 </html>
