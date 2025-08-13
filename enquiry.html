@@ -1,177 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request a Property Survey | Get a Quote | LEM Building Surveying Ltd</title>
-  <meta name="description" content="Submit your property details to request a free, no-obligation quote for a building survey, damp report, EPC, or floorplan. Serving Deeside, Chester & the North West." />
-  <meta name="keywords" content="Request Building Survey Quote, Property Survey Form, RICS Survey Enquiry, Damp Survey Quote, Floorplan Survey Deeside Chester North West" />
-  <link rel="stylesheet" href="/styles.css" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GXH0EY936M');
-  </script>
-</head>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.enquiry-form');   /* or .contact-form */
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    const resp = await fetch('https://formspree.io/f/xzzdqqqz', {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (resp.ok) {
-      /* fire Google-Ads conversion before leaving */
-      gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXXX/AbCdEFgHiJk' });
-      window.location = '/thank-you.html';
-    } else {
-      alert('Sorry, something went wrong. Please email us directly.');
-    }
-  });
-});
-</script>
-<body>
-  <!-- Shared Header -->
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-</script>
-  <meta name="description"
-        content="LEM Building Surveying Ltd. – Professional property surveys across North Wales, Chester, and the North West." />
-<head>
-	
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Request a Property Survey | Get a Quote | LEM Building Surveying Ltd
+    </title>
+    <meta
+      name="description"
+      content="Submit your property details to request a free, no-obligation quote for a building survey, damp report, EPC, or floorplan. Serving Deeside, Chester & the North West."
+    />
+    <meta
+      name="keywords"
+      content="Request Building Survey Quote, Property Survey Form, RICS Survey Enquiry, Damp Survey Quote, Floorplan Survey Deeside Chester North West"
+    />
+    <link rel="stylesheet" href="/styles.css" />
 
-  <!-- CTA colour override for header only -->
-  <style>
-    /* Use your “sage” for buttons on charcoal (header) */
-    .main-nav a.cta {
-      background-color: var(--sage-grey) !important;
-      color:       var(--text-dark) !important;
-    }
-    .main-nav a.cta:hover {
-      background-color: var(--light-grey) !important;
-    }
-  </style>
-</head>
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-RXf+QSDCUqzlgfO2z3lBU9rxO9xWJ6gU5AFVOIGuKz6ZlnbqybwVu6vZP4ylDkKUTnSR5Fctj/6aydcZ4IB3BQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GXH0EY936M");
+    </script>
+  </head>
+  <body>
+    <!-- Shared Header -->
+    <div id="header-include"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/header.html")
+          .then((r) => r.text())
+          .then(
+            (html) =>
+              (document.getElementById("header-include").innerHTML = html),
+          )
+          .catch((err) => console.error("Header load failed:", err));
+      });
+    </script>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+    <!-- ENQUIRY PAGE -->
+    <section class="enquiry-page">
+      <div class="box-container">
+        <h1>Request a Property Survey</h1>
+        <p>
+          Complete the form below and Liam will be in touch to confirm details
+          or provide a tailored quote—no obligation.
+        </p>
 
-  <title>LEM Building Surveying Ltd.</title>
-</head>
-<body>
+        <form
+          class="quote-form"
+          action="https://formspree.io/f/xzzdqqqz"
+          method="POST"
+        >
+          <input type="hidden" name="_next" value="/thank-you.html" />
+          <div class="form-grid">
+            <label
+              >Full Name
+              <input type="text" name="name" required />
+            </label>
+            <label
+              >Email Address
+              <input type="email" name="email" required />
+            </label>
+            <label
+              >Phone Number
+              <input type="tel" name="phone" required />
+            </label>
+            <label
+              >Preferred Contact Method
+              <select name="contact-method" required>
+                <option value="">-- Please Select --</option>
+                <option value="email">Email</option>
+                <option value="phone-call">Phone Call</option>
+                <option value="text-message">SMS / Text Message</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="no-preference">No Preference</option>
+              </select>
+            </label>
+            <label
+              >Survey Type
+              <select name="survey-type" required>
+                <option value="">-- Please Select --</option>
+                <option value="level-1">RICS Level 1 Home Survey</option>
+                <option value="level-2">RICS Level 2 Home Survey</option>
+                <option value="level-3">RICS Level 3 Home Survey</option>
+                <option value="damp">Damp &amp; Timber Report</option>
+                <option value="epc">EPC with Floorplan</option>
+                <option value="measured">
+                  Measured Survey &amp; Floorplan
+                </option>
+                <option value="ventilation">Ventilation Assessment</option>
+                <option value="unsure">Unsure – Please advise</option>
+              </select>
+            </label>
+            <label
+              >Property Address
+              <input
+                type="text"
+                name="address"
+                placeholder="123 High Street, Flintshire"
+              />
+            </label>
+            <label
+              >Number of Bedrooms
+              <input
+                type="number"
+                name="bedrooms"
+                min="0"
+                placeholder="e.g. 3"
+              />
+            </label>
+            <label
+              >Additional Notes
+              <textarea
+                name="details"
+                rows="4"
+                placeholder="Any known issues, preferred times, or questions."
+              ></textarea>
+            </label>
+            <button type="submit" class="cta-button">Submit Enquiry</button>
+          </div>
+        </form>
 
-  <header>
-    <div class="header-inner">
-      <div class="branding">
-        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
-          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
-          <span class="site-name">LEM Building Surveying Ltd.</span>
-        </a>
+        <p class="thank-you-note">
+          Thank you—we’ll be in touch shortly to help with your survey needs.
+        </p>
       </div>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
-          
-          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html)
-        .catch(err => console.error('Header load failed:', err));
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html)
-        .catch(err => console.error('Footer load failed:', err));
-    });
-  </script>
+    </section>
 
-  <!-- ENQUIRY PAGE -->
-  <section class="enquiry-page">
-    <div class="box-container">
-      <h1>Request a Property Survey</h1>
-      <p>Complete the form below and Liam will be in touch to confirm details or provide a tailored quote—no obligation.</p>
-
-      <!-- Formspree: _next ensures redirect after successful send -->
-      <form action="https://formspree.io/f/xzzdqqqz" method="POST" class="enquiry-form">
-        <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
-
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required />
-        
-        <label for="contact-method">Preferred Contact Method:</label>
-         <select id="contact-method" name="contact-method" required>
-           <option value="">-- Please Select --</option>
-           <option value="email">Email</option>
-           <option value="phone-call">Phone Call</option>
-           <option value="text-message">SMS / Text Message</option>
-           <option value="whatsapp">WhatsApp</option>
-          <option value="no-preference">No Preference</option>
-         </select>
-
-        <label for="survey-type">Survey Type:</label>
-        <select id="survey-type" name="survey-type" required>
-          <option value="">-- Please Select --</option>
-          <option value="level-1">RICS Level 1 Home Survey</option>
-          <option value="level-2">RICS Level 2 Home Survey</option>
-          <option value="level-3">RICS Level 3 Home Survey</option>
-          <option value="damp">Damp &amp; Timber Report</option>
-          <option value="epc">EPC with Floorplan</option>
-          <option value="measured">Measured Survey &amp; Floorplan</option>
-          <option value="ventilation">Ventilation Assessment</option>
-          <option value="unsure">Unsure – Please advise</option>
-        </select>
-
-        <label for="address">Property Address:</label>
-        <input type="text" id="address" name="address" placeholder="123 High Street, Flintshire" />
-
-        <label for="bedrooms">Number of Bedrooms:</label>
-        <input type="number" id="bedrooms" name="bedrooms" min="0" placeholder="e.g. 3" />
-
-        <label for="details">Additional Notes:</label>
-        <textarea id="details" name="details" rows="4" placeholder="Any known issues, preferred times, or questions."></textarea>
-
-        <button type="submit" class="cta-button">Submit Enquiry</button>
-      </form>
-
-      <p class="thank-you-note">Thank you—we’ll be in touch shortly to help with your survey needs.</p>
-    </div>
-  </section>
-
-  <!-- Shared Footer -->
-  <div id="footer-include"></div>
-</body>
+    <!-- Shared Footer -->
+    <div id="footer-include"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/footer.html")
+          .then((r) => r.text())
+          .then(
+            (html) =>
+              (document.getElementById("footer-include").innerHTML = html),
+          )
+          .catch((err) => console.error("Footer load failed:", err));
+      });
+    </script>
+  </body>
 </html>
