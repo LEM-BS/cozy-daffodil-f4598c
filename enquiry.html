@@ -48,7 +48,11 @@
           action="https://formspree.io/f/xzzdqqqz"
           method="POST"
         >
-          <input type="hidden" name="_next" value="/thank-you.html" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://www.lembuildingsurveying.co.uk/thank-you.html"
+          />
           <div class="form-grid">
             <label
               >Full Name
@@ -132,6 +136,9 @@
           .then((r) => r.text())
           .then((html) => {
             document.getElementById("header-include").innerHTML = html;
+            const s = document.createElement("script");
+            s.src = "/nav.js";
+            document.body.appendChild(s);
           })
           .catch((err) => console.error("Header load failed:", err));
 
