@@ -149,10 +149,6 @@
         .then(html => document.getElementById('footer-include').innerHTML = html)
         .catch(err => console.error('Footer load failed:', err));
     });
-
-    function handleAreaSelect(select) {
-      if (select.value) window.location.href = select.value;
-    }
   </script>
 </body>
 </html>
