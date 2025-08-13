@@ -76,7 +76,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       fetch('/header.html')
         .then(res => res.text())
-        .then(html => document.getElementById('header-include').innerHTML = html);
+        .then(html => document.getElementById('header-include').outerHTML = html);
 
       fetch('/footer.html')
         .then(res => res.text())

@@ -11,6 +11,14 @@
 <body>
   <!-- Shared Header -->
   <div id="header-include"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => (document.getElementById('header-include').outerHTML = html))
+        .catch(err => console.error('Header load failed:', err));
+    });
+  </script>
 
   <!-- HERO SECTION -->
   <section class="hero">

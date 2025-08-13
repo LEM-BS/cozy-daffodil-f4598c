@@ -63,7 +63,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       fetch('/header.html')
         .then(res => res.text())
-        .then(data => document.getElementById('header-include').innerHTML = data);
+        .then(data => document.getElementById('header-include').outerHTML = data);
 
       fetch('/footer.html')
         .then(res => res.text())
