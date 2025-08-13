@@ -71,14 +71,7 @@
       </nav>
     </div>
   </header>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html)
-        .catch(err => console.error('Header load failed:', err));
-    });
-  </script>
+  
 
   <!-- HERO SECTION -->
   <section class="hero">
