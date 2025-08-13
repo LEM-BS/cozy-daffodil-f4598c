@@ -64,18 +64,30 @@
     <form class="quote-form" action="https://formspree.io/f/xzzdqqqz" method="POST" style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:2rem 1.5rem;margin-bottom:2rem;">
       <input type="hidden" name="_next" value="/thank-you.html"/>
       <div style="display:grid;gap:1rem;">
-        <input type="text" name="name"        placeholder="Your Name"       required/>
-        <input type="email" name="email"      placeholder="Your Email"      required/>
-        <input type="text" name="contact"     placeholder="Contact Number"  required/>
-        <input type="text" name="postcode"    placeholder="Postcode"        required/>
-        <select name="survey-type" required>
-          <option value="">Survey Type</option>
-          <option value="level-1">Level 1 — Condition Report</option>
-          <option value="level-2">Level 2 — HomeBuyer Survey</option>
-          <option value="level-3">Level 3 — Building Survey</option>
-          <option value="unsure">Unsure</option>
-        </select>
-        <input type="text" name="bedrooms" placeholder="No. of Bedrooms" required/>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">Your Name
+          <input type="text" name="name" placeholder="e.g. Jane Smith" required/>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">Email
+          <input type="email" name="email" placeholder="e.g. jane@example.com" required/>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">Contact Number
+          <input type="text" name="contact" placeholder="e.g. 01234 567890" required/>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">Postcode
+          <input type="text" name="postcode" placeholder="e.g. CH1 2AB" required/>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">Survey Type
+          <select name="survey-type" required>
+            <option value="">Select a survey type</option>
+            <option value="level-1">Level 1 — Condition Report</option>
+            <option value="level-2">Level 2 — HomeBuyer Survey</option>
+            <option value="level-3">Level 3 — Building Survey</option>
+            <option value="unsure">Unsure</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:.25rem;">No. of Bedrooms
+          <input type="text" name="bedrooms" placeholder="e.g. 3" required/>
+        </label>
         <button type="submit" class="cta-button hero-contrast" style="margin-top:1rem;width:100%;">Get My Survey Quote in 60 Minutes</button>
       </div>
       <ul style="list-style:disc inside;margin-top:1.5rem;color:#233038;font-size:1rem;text-align:left;">
