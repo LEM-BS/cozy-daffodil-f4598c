@@ -10,7 +10,7 @@
 </head>
 <body>
   <!-- Shared Header -->
-  <div id="header-include"></div>
+  <!--#include virtual="/header.html" -->
 
   <!-- BLOG CONTENT -->
   <section class="about-box">
@@ -69,19 +69,8 @@
   </section>
 
   <!-- FOOTER -->
-  <div id="footer-include"></div>
+  <!--#include virtual="/footer.html" -->
 
-  <!-- Load Header/Footer -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-
-      fetch('/footer.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+    
 </body>
 </html>

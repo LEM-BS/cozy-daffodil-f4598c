@@ -10,14 +10,8 @@
 </head>
 <body>
   <!-- Shared Header -->
-<div id="header-include"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/header.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-  });
-</script>
+<!--#include virtual="/header.html" -->
+
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -131,13 +125,7 @@
   </div>
 
   <!-- Footer -->
-  	<div id="footer-include"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/footer.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('footer-include').innerHTML = html);
-  });
-</script>
+  	<!--#include virtual="/footer.html" -->
+
 </body>
 </html>
