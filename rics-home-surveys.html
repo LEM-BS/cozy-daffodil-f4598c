@@ -395,9 +395,6 @@
   <div id="footer-include"></div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html);
       fetch('/footer.html')
         .then(r => r.text())
         .then(html => document.getElementById('footer-include').innerHTML = html);
@@ -426,15 +423,6 @@
         }
       });
     });
-  </script>
-
-  <!-- Google Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-GXH0EY936M');
   </script>
 </body>
 </html>
