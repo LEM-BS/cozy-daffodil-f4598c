@@ -83,68 +83,72 @@
     </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section">
-    <h2>Client Testimonials</h2>
-    <div class="ti-widget ti-goog"><!-- Trustindex widget will load here --></div>
-    <script defer async src="https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7"></script>
-  </section>
+    <section id="testimonials" class="section">
+      <h2>Client Testimonials</h2>
+      <div class="ti-widget ti-goog"><!-- Trustindex widget will load here --></div>
+      <script defer async src="https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7"></script>
+    </section>
 
     <!-- SERVICE AREA DROPDOWN -->
-<section class="home-areas improved-areas">
-  <div class="box-container">
-    <!-- 1. Header column -->
-    <div class="areas-header">
-      <h2>Areas We Cover</h2>
-      <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
-    </div>
+    <section class="home-areas improved-areas">
+      <div class="box-container">
+        <!-- 1. Header column -->
+        <div class="areas-header">
+          <h2>Areas We Cover</h2>
+          <p class="lead">Based in Connah’s Quay, we serve property owners across Flintshire, Chester, and surrounding areas</p>
+        </div>
 
-    <!-- 2. Content column -->
-    <div class="areas-content">
-      <!-- a) Styled select card -->
-      <div class="dropdown-card">
-        <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
-        <div class="custom-select">
-          <select id="areaDropdown" onchange="handleAreaSelect(this)">
-            <option value="">Select an area…</option>
-            <option value="/connahs-quay.html">Connah’s Quay</option>
-            <option value="/buckley.html">Buckley</option>
-            <option value="/hawarden.html">Hawarden</option>
-            <option value="/ewloe.html">Ewloe</option>
-            <option value="/deeside.html">Deeside</option>
-            <option value="/broughton.html">Broughton</option>
-            <option value="/flintshire.html">Flintshire</option>
-            <option value="/chester.html">Chester</option>
-            <option value="/cheshire.html">Cheshire</option>
-            <option value="/northop.html">Northop</option>
-            <option value="/northop-hall.html">Northop Hall</option>
-            <option value="/mold.html">Mold</option>
-            <option value="/north-west-of-england.html">North West of England</option>
-          </select>
-          <span class="chevron">⌄</span>
+        <!-- 2. Content column -->
+        <div class="areas-content">
+          <!-- a) Styled select card -->
+          <div class="dropdown-card">
+            <label for="areaDropdown" class="dropdown-label">Jump to an area:</label>
+            <div class="custom-select">
+              <select id="areaDropdown" onchange="handleAreaSelect(this)">
+                <option value="">Select an area…</option>
+                <option value="/connahs-quay.html">Connah’s Quay</option>
+                <option value="/buckley.html">Buckley</option>
+                <option value="/hawarden.html">Hawarden</option>
+                <option value="/ewloe.html">Ewloe</option>
+                <option value="/deeside.html">Deeside</option>
+                <option value="/broughton.html">Broughton</option>
+                <option value="/flintshire.html">Flintshire</option>
+                <option value="/chester.html">Chester</option>
+                <option value="/cheshire.html">Cheshire</option>
+                <option value="/northop.html">Northop</option>
+                <option value="/northop-hall.html">Northop Hall</option>
+                <option value="/mold.html">Mold</option>
+                <option value="/north-west-of-england.html">North West of England</option>
+              </select>
+              <span class="chevron">⌄</span>
+            </div>
+          </div>
         </div>
       </div>
-</section>
+    </section>
 
-<script>
-  function handleAreaSelect(select) {
-    if (select.value) window.location.href = select.value;
-  }
-</script>
+    <script>
+      function handleAreaSelect(select) {
+        if (select.value) window.location.href = select.value;
+      }
+    </script>
 
-  <!-- STICKY CTA -->
-  <div class="sticky-cta">
-    <a href="/enquiry.html" class="cta-button">Speak to Liam</a>
-  </div>
+    </main>
 
-  <!-- Shared Footer -->
-  <div id="footer-include"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html)
-        .catch(err => console.error('Footer load failed:', err));
-    });
-  </script>
-</body>
-</html>
+    <!-- STICKY CTA -->
+    <div class="sticky-cta">
+      <a href="/enquiry.html" class="cta-button">Speak to Liam</a>
+    </div>
+
+    <!-- Shared Footer -->
+    <div id="footer-include"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('/footer.html')
+          .then(r => r.text())
+          .then(html => document.getElementById('footer-include').innerHTML = html)
+          .catch(err => console.error('Footer load failed:', err));
+      });
+    </script>
+  </body>
+  </html>
