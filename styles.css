@@ -93,6 +93,10 @@ header {
   color: var(--divider-grey);
 }
 .site-footer .footer-links a:hover { color: #fff; }
+.site-footer .footer-links a[aria-current="page"] {
+  color: #fff;
+  text-decoration: underline;
+}
 .site-footer .footer-logos img {
   margin: .5rem .5rem 0 0;
 }
