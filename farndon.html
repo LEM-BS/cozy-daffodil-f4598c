@@ -79,19 +79,32 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <div id="footer-include"></div>
+      <section aria-labelledby="services-links">
+    <h2 id="services-links">Our services in Farndon</h2>
+    <p>We provide the full range of residential surveying services locally.</p>
+    <ul class="service-links">
+      <li><a href="/homebuyers-survey.html">RICS HomeBuyer Survey</a></li>
+      <li><a href="/level-2-survey.html">RICS Level 2 (HomeBuyer) Survey</a></li>
+      <li><a href="/level-3-survey.html">RICS Level 3 (Building) Survey</a></li>
+      <li><a href="/rics-valuation.html">RICS Valuations</a></li>
+      <li><a href="/damp-survey.html">Damp Surveys</a></li>
+      <li><a href="/structural-inspection.html">Structural Inspections</a></li>
+      <li><a href="/snagging-survey.html">New-build Snagging Surveys</a></li>
+    </ul>
+  </section>
 
-  <!-- Inject header/footer -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+  <section aria-labelledby="nearby-links">
+    <h2 id="nearby-links">Nearby areas we cover</h2>
+    <ul class="nearby-links">
+      <li><a href="/flint.html">Flint</a></li>
+      <li><a href="/flintshire.html">Flintshire</a></li>
+      <li><a href="/gresford.html">Gresford</a></li>
+      <li><a href="/guilden-sutton.html">Guilden Sutton</a></li>
+    </ul>
+  </section>
+  <div id="footer-include"></div>
+  <script src="/nav.js"></script>
+
+  
 </body>
 </html>

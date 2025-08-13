@@ -80,22 +80,32 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+      <section aria-labelledby="services-links">
+    <h2 id="services-links">Our services in Guilden Sutton</h2>
+    <p>We provide the full range of residential surveying services locally.</p>
+    <ul class="service-links">
+      <li><a href="/homebuyers-survey.html">RICS HomeBuyer Survey</a></li>
+      <li><a href="/level-2-survey.html">RICS Level 2 (HomeBuyer) Survey</a></li>
+      <li><a href="/level-3-survey.html">RICS Level 3 (Building) Survey</a></li>
+      <li><a href="/rics-valuation.html">RICS Valuations</a></li>
+      <li><a href="/damp-survey.html">Damp Surveys</a></li>
+      <li><a href="/structural-inspection.html">Structural Inspections</a></li>
+      <li><a href="/snagging-survey.html">New-build Snagging Surveys</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="nearby-links">
+    <h2 id="nearby-links">Nearby areas we cover</h2>
+    <ul class="nearby-links">
+      <li><a href="/handbridge.html">Handbridge</a></li>
+      <li><a href="/hawarden.html">Hawarden</a></li>
+      <li><a href="/higher-kinnerton.html">Higher Kinnerton</a></li>
+      <li><a href="/holywell.html">Holywell</a></li>
+    </ul>
+  </section>
   <div id="footer-include"></div>
 
   <!-- Load Shared Header/Footer -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('header-include').innerHTML = html)
-        .catch(err => console.error('Header load failed:', err)); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-
-      fetch('/footer.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html)
-        .catch(err => console.error('Footer load failed:', err));
-    });
-  </script>
+  <script src="/nav.js"></script>
 </body>
 </html>
