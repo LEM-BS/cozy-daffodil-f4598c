@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const data = new FormData(form);
 
-    const resp = await fetch('https://formspree.io/f/xzzdqqqz', {
+    const json = Object.fromEntries(data.entries());
+    const resp = await fetch('/api/contact', {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(json)
     });
 
     if (resp.ok) {
@@ -119,9 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <h1>Request a Property Survey</h1>
       <p>Complete the form below and Liam will be in touch to confirm details or provide a tailored quote—no obligation.</p>
 
-      <!-- Formspree: _next ensures redirect after successful send -->
-      <form action="https://formspree.io/f/xzzdqqqz" method="POST" class="enquiry-form">
-        <input type="hidden" name="_next" value="https://www.lembuildingsurveying.co.uk/thank-you.html" />
+      <form action="/api/contact" method="POST" class="enquiry-form">
 
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required />

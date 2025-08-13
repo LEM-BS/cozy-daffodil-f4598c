@@ -62,8 +62,7 @@
     <h1>Book Your RICS Home Survey — Fast, Clear &amp; Local</h1>
     <p>Make confident property decisions with a qualified surveyor’s report — turnaround in as little as 5–7&nbsp;days. Get your tailored quote now and secure your survey date.</p>
 
-    <form class="quote-form" action="https://formspree.io/f/xzzdqqqz" method="POST">
-      <input type="hidden" name="_next" value="/thank-you.html"/>
+    <form class="quote-form" action="/api/contact" method="POST">
       <div class="form-grid">
         <label>Your Name
           <input type="text" name="name" placeholder="e.g. Jane Smith" required/>
@@ -264,5 +263,25 @@
     });
   </script>
   <script src="/nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.quote-form');
+      if (!form) return;
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        const resp = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          window.location.href = '/thank-you.html';
+        } else {
+          alert('Sorry, something went wrong. Please email us directly.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
