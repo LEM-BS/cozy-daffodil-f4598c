@@ -83,15 +83,11 @@
     </section>
 
   <!-- TESTIMONIALS -->
-  <div id="testimonials-include"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/testimonials.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('testimonials-include').innerHTML = html)
-        .catch(err => console.error('Testimonials include failed:', err));
-    });
-  </script>
+  <section id="testimonials" class="section">
+    <h2>Client Testimonials</h2>
+    <div class="ti-widget ti-goog"><!-- Trustindex widget will load here --></div>
+    <script defer async src="https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7"></script>
+  </section>
 
     <!-- SERVICE AREA DROPDOWN -->
 <section class="home-areas improved-areas">
