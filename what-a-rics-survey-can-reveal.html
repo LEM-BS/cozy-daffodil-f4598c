@@ -77,18 +77,7 @@
 
   <div id="footer-include"></div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-
-      fetch('/footer.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+  <script src="/nav.js"></script>
 
 </body>
-</html
->
+</html>
