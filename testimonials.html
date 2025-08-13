@@ -1,3 +1,75 @@
+ <<<<<<< codex/update-header-navigation-and-include-ctas
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | LEM Building Surveying Ltd</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+
+  <main>
+    <section class="testimonial-section">
+      <div class="testimonial-slider-wrapper">
+        <h2>What Our Clients Say</h2>
+
+        <button class="slider-arrow prev" aria-label="Previous testimonial">‹</button>
+
+        <div class="testimonial-slider">
+          <blockquote class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>
+              “We used Liam to carry out a Level 2 Survey on a property we are purchasing. We found him very responsive, professional and knowledgeable. Liam highlighted issues without frightening us, offering advice on how to move forward. Would highly recommend him.”
+            </p>
+            <footer>— Lindsey M.</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>
+              “LEM provided an excellent service from start to finish. His report was clear and explained everything simply and with enough detail for me to make informed choices. I would recommend LEM to anyone needing Building Surveying services.”
+            </p>
+            <footer>— Chris S.</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Liam was fantastic—professional, efficient, and really knowledgeable. He explained everything clearly, which made the whole process much easier. I’d definitely recommend LEM Building Surveying to anyone needing EPCs, floorplans, or a property survey. A smooth and stress-free experience from start to finish!”
+            </p>
+            <footer>— Helen H.</footer>
+          </blockquote>
+        </div>
+
+        <button class="slider-arrow next" aria-label="Next testimonial">›</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-include"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById('header-include').innerHTML = html;
+          const s = document.createElement('script');
+          s.src = '/nav.js';
+          document.body.appendChild(s);
+        })
+        .catch(err => console.error('Header include failed:', err));
+
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('footer-include').innerHTML = html)
+        .catch(err => console.error('Footer include failed:', err));
+    });
+  </script>
+</body>
+</html>
+=======
   <link rel="canonical" href="https://www.lembuildingsurveying.co.uk/testimonials">
   <meta property="og:title" content="">
   <meta property="og:description" content="">
@@ -44,3 +116,4 @@
     <button class="slider-arrow next" aria-label="Next testimonial">›</button>
   </div>
 </section>
+ >>>>>>> main
