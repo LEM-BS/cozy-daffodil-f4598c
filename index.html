@@ -31,28 +31,8 @@
 </head>
 <body>
 
-  <!-- ░░ HEADER ░░ -->
-<header>
-    <div class="header-inner">
-      <div class="branding">
-        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
-          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
-          <span class="site-name">LEM Building Surveying Ltd.</span>
-        </a>
-      </div>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-        <ul class="nav-links">
-          <li><a href="/index.html" aria-current="page">Home</a></li>
-          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
-          
-          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!--#include virtual="/header.html" -->
 
-<!-- ░░ HERO + QUOTE FORM ░░ -->
 <section class="hero hero-quote">
   <div class="hero-container">
     <div class="review-badge">
@@ -255,14 +235,8 @@
   </div>
 
   <!-- FOOTER -->
-  <div id="footer-include"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+  <!--#include virtual="/footer.html" -->
+  
   <script src="/nav.js"></script>
 </body>
 </html>

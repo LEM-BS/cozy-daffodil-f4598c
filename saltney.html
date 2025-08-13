@@ -30,7 +30,7 @@
 </head>
 <body>
   <!-- Shared Header -->
-  <div id="header-include"></div>
+  <!--#include virtual="/header.html" -->
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -79,18 +79,10 @@
   </section>
 
   <!-- Shared Footer -->
-  <div id="footer-include"></div>
+  <!--#include virtual="/footer.html" -->
 
   <!-- Header & Footer Injection -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+  
+  <script src="/nav.js" defer></script>
 </body>
 </html>

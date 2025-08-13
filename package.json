@@ -1,0 +1,9 @@
+{
+  "name": "lem-static-site",
+  "version": "1.0.0",
+  "description": "Static site build with server-side includes",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node build.js"
+  }
+}
