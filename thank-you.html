@@ -1,38 +1,34 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | LEM Building Surveying Ltd</title>
-  <meta name="description" content="Thank you for your enquiry. We will get back to you soon." />
-  <link rel="canonical" href="https://www.lembuildingsurveying.co.uk/thank-you">
-  <meta property="og:title" content="Thank You | LEM Building Surveying Ltd">
-  <meta property="og:description" content="Thank you for your enquiry. We will get back to you soon.">
-  <meta property="og:url" content="https://www.lembuildingsurveying.co.uk/thank-you">
-  <meta property="og:image" content="https://www.lembuildingsurveying.co.uk/logo-sticker.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Thank You | LEM Building Surveying Ltd">
-  <meta name="twitter:description" content="Thank you for your enquiry. We will get back to you soon.">
-  <meta name="twitter:url" content="https://www.lembuildingsurveying.co.uk/thank-you">
-  <meta name="twitter:image" content="https://www.lembuildingsurveying.co.uk/logo-sticker.png">
-
-
-
-  <!-- Prevent this page from being indexed -->
-<meta name="robots" content="noindex, nofollow" />
-<link rel="stylesheet" href="/styles.css" />
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You | LEM Building Surveying Ltd</title>
+<meta content="Thank you for your enquiry. We will get back to you soon." name="description"/>
+<link href="https://www.lembuildingsurveying.co.uk/thank-you" rel="canonical"/>
+<meta content="Thank You | LEM Building Surveying Ltd" property="og:title"/>
+<meta content="Thank you for your enquiry. We will get back to you soon." property="og:description"/>
+<meta content="https://www.lembuildingsurveying.co.uk/thank-you" property="og:url"/>
+<meta content="https://www.lembuildingsurveying.co.uk/logo-sticker.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Thank You | LEM Building Surveying Ltd" name="twitter:title"/>
+<meta content="Thank you for your enquiry. We will get back to you soon." name="twitter:description"/>
+<meta content="https://www.lembuildingsurveying.co.uk/thank-you" name="twitter:url"/>
+<meta content="https://www.lembuildingsurveying.co.uk/logo-sticker.png" name="twitter:image"/>
+<!-- Prevent this page from being indexed -->
+<meta content="noindex, nofollow" name="robots">
+<link href="/styles.css" rel="stylesheet">
 <!-- Global site tag (gtag.js) - Google Analytics/Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GXH0EY936M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-GXH0EY936M');
 </script>
-
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17055358915"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17055358915"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -40,6 +36,27 @@
 
   gtag('config', 'AW-17055358915');
 </script>
+ <<<<<<< s5idbv-codex/update-nav.js-to-load-header-and-footer
+<!-- Shared Header -->
+<div id="header-include"></div>
+<!-- THANK YOU SECTION -->
+<section class="thank-you">
+<div class="box-container" style="text-align:center; padding:2rem;">
+<h2>Thank You!</h2>
+<p>Your enquiry has been successfully submitted. We will get back to you shortly.</p>
+<div style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="cta-button" href="/rics-home-surveys">See Survey Levels</a>
+<a class="secondary-button" href="/index.html">Return Home</a>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<p>© 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+</footer>
+<!-- Google Ads conversion event (replace IDs) -->
+<script>
+=======
 	
   <!-- Shared Header -->
   <div id="header-include"></div>
@@ -63,20 +80,13 @@
 
   <!-- Google Ads conversion event (replace IDs) -->
   <script>
+ >>>>>>> main
     /* If the global gtag.js is already loaded site‑wide you only need this event call */
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){dataLayer.push(arguments);}
     gtag('event','conversion',{ send_to:'AW-XXXXXXXXXX/AbCdEFgHiJk' });
   </script>
+<!-- JavaScript to inject header.html -->
+<script src="/nav.js"></script>
 
-  <!-- JavaScript to inject header.html -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html)
-        .catch(err => console.error('Header include failed:', err)); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-    });
-  </script>
-</body>
-</html>
+</link></meta></head></html>
