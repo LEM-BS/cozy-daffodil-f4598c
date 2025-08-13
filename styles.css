@@ -409,17 +409,6 @@ form button:hover, .quote-form button:hover {
 }
 .service-slider::-webkit-scrollbar, .testimonial-slider::-webkit-scrollbar { display: none; }
 .service-slider, .testimonial-slider { -ms-overflow-style: none; scrollbar-width: none; }
-.slider-arrow {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: var(--accent-blue); color: #fff; border: none;
-  font-size: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%;
-  cursor: pointer; z-index: 10; box-shadow: var(--shadow);
-  opacity: 0.92;
-}
-.slider-arrow.prev { left: .5rem; }
-.slider-arrow.next { right: .5rem; }
-.slider-arrow:focus { outline: 2px solid var(--hover-blue); }
-
 /*──────────────────────────────────────────────
   15. “AREAS WE COVER” / DROPDOWN SECTION
 ──────────────────────────────────────────────*/
@@ -567,7 +556,7 @@ form button:hover, .quote-form button:hover {
 }
 
 .slider-arrow {
-  position: absolute; top: 48%; transform: translateY(-50%);
+  position: absolute; top: 50%; transform: translateY(-50%);
   background: #ffc43a;           /* Gold arrow */
   color: var(--primary-blue);    /* Navy icon */
   border: none;
@@ -579,16 +568,12 @@ form button:hover, .quote-form button:hover {
   display: flex; align-items: center; justify-content: center;
   transition: background .23s, color .23s;
 }
-.slider-arrow.prev { left: -1rem; }
-.slider-arrow.next { right: -1rem; }
+.slider-arrow.prev { left: .5rem; }
+.slider-arrow.next { right: .5rem; }
 .slider-arrow:focus {
   outline: 3px solid var(--accent-blue);
   background: var(--primary-blue);
   color: #ffc43a;
-}
-@media (max-width: 900px) {
-  .slider-arrow.prev { left: 0.3rem; }
-  .slider-arrow.next { right: 0.3rem; }
 }
 
 /* Trust / Why Choose grid (mirrors .process-timeline) */
@@ -633,7 +618,7 @@ form button:hover, .quote-form button:hover {
 
 /* Utility: blue section title */
 .section-title--blue {
-  color: var(--primary);       /* whatever your “blue” variable is */
+  color: var(--primary-blue);       /* whatever your “blue” variable is */
   margin-bottom: 1rem;
 }
 
