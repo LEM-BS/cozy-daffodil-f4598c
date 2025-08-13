@@ -31,25 +31,16 @@
 </head>
 <body>
 
-  <!-- ░░ HEADER ░░ -->
-<header>
-    <div class="header-inner">
-      <div class="branding">
-        <a href="/index.html" class="logo-link" aria-label="LEM Building Surveying Ltd home">
-          <img src="/logo-sticker.png" alt="LEM Building Surveying Ltd Logo" class="logo" />
-          <span class="site-name">LEM Building Surveying Ltd.</span>
-        </a>
-      </div>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/rics-home-surveys.html">RICS Home Surveys</a></li>
-          
-          <li><a href="/enquiry.html" class="cta">Get a Quote</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Shared Header -->
+    <div id="header-include"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('/header.html')
+          .then(r => r.text())
+          .then(html => (document.getElementById('header-include').innerHTML = html))
+          .catch(err => console.error('Header load failed:', err));
+      });
+    </script>
 
 <!-- ░░ HERO + QUOTE FORM ░░ -->
 <section class="hero hero-quote">
@@ -151,11 +142,10 @@
           </div>
           <button class="slider-arrow next" aria-label="Next services">›</button>
         </div>
-        <div class="center-cta">
-          <a href="/services.html" class="cta-button">Browse All Services</a>
-        </div>
-      </div>
-    </section>
+          <div class="center-cta">
+            <a href="/services.html" class="cta-button">Browse All Services</a>
+          </div>
+        </section>
 
     <script>
       document.querySelectorAll('.service-slider-wrapper').forEach(wrapper => {
