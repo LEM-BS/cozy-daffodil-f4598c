@@ -83,16 +83,6 @@
   <div id="footer-include"></div>
 
   <!-- Load Header/Footer -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('header-include').innerHTML = html); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-
-      fetch('/footer.html')
-        .then(res => res.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html);
-    });
-  </script>
+    <script src="/nav.js"></script>
 </body>
 </html>

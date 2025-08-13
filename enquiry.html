@@ -112,18 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </nav>
     </div>
   </header>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/header.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('header-include').innerHTML = html)
-        .catch(err => console.error('Header load failed:', err)); const s=document.createElement("script"); s.src="/nav.js"; document.body.appendChild(s);
-      fetch('/footer.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('footer-include').innerHTML = html)
-        .catch(err => console.error('Footer load failed:', err));
-    });
-  </script>
+  
 
   <!-- ENQUIRY PAGE -->
   <section class="enquiry-page">
@@ -184,6 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </section>
 
   <!-- Shared Footer -->
-  <div id="footer-include"></div>
+  <div id="footer-include"></div><script src="/nav.js"></script>
 </body>
 </html>
