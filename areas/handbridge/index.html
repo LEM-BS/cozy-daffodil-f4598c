@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home & Building Surveys in Handbridge</title>
+  <meta name="description" content="RICS home and building surveys in Handbridge." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+
+  <section class="intro">
+    <h1>Home & Building Surveys in Handbridge</h1>
+    <p>Independent RICS surveys for homes in Handbridge and surrounding areas.</p>
+  </section>
+
+  <section class="services">
+    <h2>Services Available</h2>
+    <ul>
+      <li>RICS Home Surveys (Level 1, 2 & 3)</li>
+      <li>Damp & Timber Reports</li>
+      <li>Measured Surveys & Floorplans</li>
+      <li>EPCs with Floorplans</li>
+    </ul>
+  </section>
+
+  <section class="turnaround">
+    <h2>Turnaround</h2>
+    <p>Most reports delivered within 3–5 working days.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Book?</h2>
+    <a href="/enquiry.html" class="cta-button">Get a Quick Quote</a>
+  </section>
+
+  <section class="testimonials">
+    <h2>Local Testimonials</h2>
+    <p>See what clients in Handbridge say about us.</p>
+    <a href="/testimonials.html">Read testimonials</a>
+  </section>
+
+  <section class="faq-snippet">
+    <h2>FAQ</h2>
+    <p>Have questions about surveys in Handbridge? <a href="/faqs.html">Read our FAQ</a>.</p>
+  </section>
+
+  <div id="footer-include"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => { document.getElementById('header-include').innerHTML = html; const s=document.createElement('script'); s.src='/nav.js'; document.body.appendChild(s); });
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => { document.getElementById('footer-include').innerHTML = html; });
+    });
+  </script>
+</body>
+</html>

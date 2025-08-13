@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Areas We Cover</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="header-include"></div>
+  <main>
+    <h1>Areas We Cover</h1>
+    <ul>
+      <li><a href='/areas/aldford/'>Aldford</a></li>
+      <li><a href='/areas/boughton/'>Boughton</a></li>
+      <li><a href='/areas/bretton/'>Bretton</a></li>
+      <li><a href='/areas/broughton/'>Broughton</a></li>
+      <li><a href='/areas/buckley/'>Buckley</a></li>
+      <li><a href='/areas/cheshire/'>Cheshire</a></li>
+      <li><a href='/areas/chester/'>Chester</a></li>
+      <li><a href='/areas/christleton/'>Christleton</a></li>
+      <li><a href='/areas/connahs-quay/'>Connahs Quay</a></li>
+      <li><a href='/areas/curzon-park/'>Curzon Park</a></li>
+      <li><a href='/areas/deeside/'>Deeside</a></li>
+      <li><a href='/areas/dobshill/'>Dobshill</a></li>
+      <li><a href='/areas/dodleston/'>Dodleston</a></li>
+      <li><a href='/areas/eccleston/'>Eccleston</a></li>
+      <li><a href='/areas/ewloe/'>Ewloe</a></li>
+      <li><a href='/areas/farndon/'>Farndon</a></li>
+      <li><a href='/areas/flint/'>Flint</a></li>
+      <li><a href='/areas/flintshire/'>Flintshire</a></li>
+      <li><a href='/areas/gresford/'>Gresford</a></li>
+      <li><a href='/areas/guilden-sutton/'>Guilden Sutton</a></li>
+      <li><a href='/areas/handbridge/'>Handbridge</a></li>
+      <li><a href='/areas/hawarden/'>Hawarden</a></li>
+      <li><a href='/areas/higher-kinnerton/'>Higher Kinnerton</a></li>
+      <li><a href='/areas/holywell/'>Holywell</a></li>
+      <li><a href='/areas/hoole/'>Hoole</a></li>
+      <li><a href='/areas/huntington/'>Huntington</a></li>
+      <li><a href='/areas/lower-kinnerton/'>Lower Kinnerton</a></li>
+      <li><a href='/areas/marford/'>Marford</a></li>
+      <li><a href='/areas/mold/'>Mold</a></li>
+      <li><a href='/areas/mynydd-isa/'>Mynydd Isa</a></li>
+      <li><a href='/areas/new-brighton/'>New Brighton</a></li>
+      <li><a href='/areas/newton/'>Newton</a></li>
+      <li><a href='/areas/north-west-of-england/'>North West Of England</a></li>
+      <li><a href='/areas/northop/'>Northop</a></li>
+      <li><a href='/areas/northop-hall/'>Northop Hall</a></li>
+      <li><a href='/areas/oakenholt/'>Oakenholt</a></li>
+      <li><a href='/areas/penyffordd/'>Penyffordd</a></li>
+      <li><a href='/areas/pulford/'>Pulford</a></li>
+      <li><a href='/areas/queensferry/'>Queensferry</a></li>
+      <li><a href='/areas/rossett/'>Rossett</a></li>
+      <li><a href='/areas/saighton/'>Saighton</a></li>
+      <li><a href='/areas/saltney/'>Saltney</a></li>
+      <li><a href='/areas/sandycroft/'>Sandycroft</a></li>
+      <li><a href='/areas/shotton/'>Shotton</a></li>
+      <li><a href='/areas/sychdyn/'>Sychdyn</a></li>
+      <li><a href='/areas/tarporley/'>Tarporley</a></li>
+      <li><a href='/areas/tarvin/'>Tarvin</a></li>
+      <li><a href='/areas/tattenhall/'>Tattenhall</a></li>
+      <li><a href='/areas/vicars-cross/'>Vicars Cross</a></li>
+      <li><a href='/areas/waverton/'>Waverton</a></li>
+      <li><a href='/areas/westminster-park/'>Westminster Park</a></li>
+    </ul>
+  </main>
+  <div id="footer-include"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/header.html')
+        .then(r => r.text())
+        .then(html => { document.getElementById('header-include').innerHTML = html; const s=document.createElement('script'); s.src='/nav.js'; document.body.appendChild(s); });
+      fetch('/footer.html')
+        .then(r => r.text())
+        .then(html => { document.getElementById('footer-include').innerHTML = html; });
+    });
+  </script>
+</body>
+</html>
