@@ -308,6 +308,76 @@ form button:hover, .quote-form button:hover {
 }
 
 /*──────────────────────────────────────────────
+  HOME HERO QUOTE FORM
+──────────────────────────────────────────────*/
+.hero-quote {
+  background: #ECF1EF;
+  padding: 3rem 0 1rem;
+}
+
+.hero-quote .hero-container {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.review-badge {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.review-badge .stars {
+  color: #FFB300;
+  font-size: 1.5rem;
+}
+
+.review-badge .rating-text {
+  margin-left: .5rem;
+  color: #233038;
+}
+
+.hero-quote h1 {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.hero-quote > p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.quote-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quote-form .form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote-form label {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.quote-form button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.quote-form ul {
+  list-style: disc inside;
+  margin-top: 1.5rem;
+  color: #233038;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/*──────────────────────────────────────────────
   13. STICKY CTA
 ──────────────────────────────────────────────*/
 .sticky-cta {
