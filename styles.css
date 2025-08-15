@@ -151,7 +151,7 @@ section > .box-container {
   grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
   gap: 2rem; margin: 2rem 0;
 }
-[class*="card"], [class*="service"], [class*="survey"], .testimonial {
+[class*="card"], [class*="service"], [class*="survey"] {
   background: var(--card-bg); padding: 2rem; border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   border: 1px solid var(--divider-grey);
@@ -394,21 +394,21 @@ form button:hover, .quote-form button:hover {
 }
 
 /*──────────────────────────────────────────────
-  14. SLIDER (Testimonials & Services)
+  14. SLIDER (Services)
 ──────────────────────────────────────────────*/
-.service-slider-wrapper, .testimonial-slider-wrapper {
+.service-slider-wrapper {
   position: relative; margin: 2rem 0;
 }
-.service-slider, .testimonial-slider {
+.service-slider {
   display: flex; gap: 1rem; overflow-x: auto;
   scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
   padding-bottom: 1rem;
 }
-.service-slider .service-card, .testimonial-slider .testimonial {
+.service-slider .service-card {
   flex: 0 0 80%; scroll-snap-align: start;
 }
-.service-slider::-webkit-scrollbar, .testimonial-slider::-webkit-scrollbar { display: none; }
-.service-slider, .testimonial-slider { -ms-overflow-style: none; scrollbar-width: none; }
+.service-slider::-webkit-scrollbar { display: none; }
+.service-slider { -ms-overflow-style: none; scrollbar-width: none; }
 /*──────────────────────────────────────────────
   15. “AREAS WE COVER” / DROPDOWN SECTION
 ──────────────────────────────────────────────*/
@@ -490,18 +490,13 @@ form button:hover, .quote-form button:hover {
 }
 
 /*──────────────────────────────────────────────
- 11. TESTIMONIALS SLIDER — LIGHT, MODERN VERSION
+ 11. TESTIMONIALS SECTION — LIGHT, MODERN VERSION
 ──────────────────────────────────────────────*/
 .testimonial-section {
   background: var(--soft-bg); /* Light background */
   color: var(--text-main);
   padding: 3rem 1rem;
   margin-bottom: 2rem;
-}
-.testimonial-section .box-container {
-  background: transparent;
-  box-shadow: none;
-  max-width: 900px;
 }
 .testimonial-section h2 {
   color: var(--accent-blue); /* Main action blue for heading */
