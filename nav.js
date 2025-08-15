@@ -16,7 +16,19 @@
       })
       .catch(function(err){ console.error('Footer load failed:', err); });
 
-    Promise.all([headerPromise, footerPromise]).then(setupNav);
+    Promise.all([headerPromise, footerPromise]).then(function(){
+      setupNav();
+      loadTrustIndex();
+    });
+  }
+
+  function loadTrustIndex(){
+    if (document.querySelector('script[src^="https://cdn.trustindex.io/loader.js"]')) return;
+    var s = document.createElement('script');
+    s.src = 'https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7';
+    s.async = true;
+    s.defer = true;
+    document.head.appendChild(s);
   }
 
   function setupNav(){
