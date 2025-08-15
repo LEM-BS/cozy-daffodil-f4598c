@@ -33,4 +33,5 @@ test('toggles navigation classes on click', () => {
 
   expect(navLinks.classList.contains('nav-open')).toBe(true);
   expect(navToggle.classList.contains('open')).toBe(true);
+  expect(navToggle.getAttribute('aria-expanded')).toBe('true');
 });

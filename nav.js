@@ -37,14 +37,16 @@
   function setupNav(){
     var navToggle = document.querySelector('.nav-toggle');
     var navLinks = document.querySelector('.nav-links');
-    if (!navToggle || !navLinks) return;
-    navToggle.addEventListener('click', function(){
-      navLinks.classList.toggle('nav-open');
-      navToggle.classList.toggle('open');
-    });
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function(){
+        var isOpen = navLinks.classList.toggle('nav-open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
 
     var path = window.location.pathname;
-    navLinks.querySelectorAll('a').forEach(function(link){
+    document.querySelectorAll('.main-nav a').forEach(function(link){
       var href = link.getAttribute('href');
       if (href === path || (path === '/' && href === '/index.html')) {
         link.setAttribute('aria-current', 'page');
