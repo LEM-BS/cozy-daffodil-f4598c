@@ -151,10 +151,19 @@
         </div>
       </section>
       <!-- TESTIMONIALS -->
-      <section class="section">
-        <h2>Client Testimonials</h2>
-        <div class="ti-widget ti-goog"></div>
-      </section>
+      <div id="testimonials-include"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          fetch("/testimonials-snippet.html")
+            .then((res) => res.text())
+            .then((html) => {
+              const container = document.getElementById("testimonials-include");
+              container.innerHTML = html;
+              window.loadTrustIndex();
+            })
+            .catch((err) => console.error("Testimonials include failed:", err));
+        });
+      </script>
       <!-- SERVICE AREA DROPDOWN -->
       <section class="home-areas improved-areas">
         <div class="box-container">
