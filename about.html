@@ -151,25 +151,10 @@
         </div>
       </section>
       <!-- TESTIMONIALS -->
-      <div id="testimonials-include"></div>
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          fetch("/testimonials-snippet.html")
-            .then((res) => res.text())
-            .then((html) => {
-              const container = document.getElementById("testimonials-include");
-              container.innerHTML = html;
-
-              const script = document.createElement("script");
-              script.src =
-                "https://cdn.trustindex.io/loader.js?f82e0f551228447e6c06f9b86c7";
-              script.async = true;
-              script.defer = true;
-              container.appendChild(script);
-            })
-            .catch((err) => console.error("Testimonials include failed:", err));
-        });
-      </script>
+      <section class="section">
+        <h2>Client Testimonials</h2>
+        <div class="ti-widget ti-goog"></div>
+      </section>
       <!-- SERVICE AREA DROPDOWN -->
       <section class="home-areas improved-areas">
         <div class="box-container">
