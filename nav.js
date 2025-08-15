@@ -31,6 +31,9 @@
     document.head.appendChild(s);
   }
 
+  // Expose globally so other pages can trigger TrustIndex loading
+  window.loadTrustIndex = loadTrustIndex;
+
   function setupNav(){
     var navToggle = document.querySelector('.nav-toggle');
     var navLinks = document.querySelector('.nav-links');
